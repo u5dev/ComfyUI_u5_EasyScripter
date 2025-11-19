@@ -7,6 +7,38 @@ u5 EasyScripterの主要なバージョン更新履歴です。
 ## 📝 更新履歴
 
 
+### v3.2.0 (2025-11-19) - 多言語ドキュメント対応
+
+#### Added
+- **多言語ドキュメント対応**: 5言語に完全翻訳したドキュメントを追加
+  - **英語版**: docs/en/ (14ファイル)
+  - **中国語簡体字版**: docs/zh/ (14ファイル)
+  - **スペイン語版**: docs/es/ (14ファイル)
+  - **フランス語版**: docs/fr/ (14ファイル)
+  - **ドイツ語版**: docs/de/ (14ファイル)
+  - 翻訳対象: README.md、構文リファレンス、ビルトイン関数ドキュメント、CHANGELOG.md、CONTENTS.md
+  - 各言語版に言語切替リンクを追加（6言語間の相互リンク）
+
+#### Changed
+- **ドキュメント構造の再編成**: 各言語版をフラット構造で配置
+  - 従来: `docs/02_builtin_functions/*.md`（階層構造）
+  - 新規: `docs/{lang}/*.md`（フラット構造）
+  - 画像は全言語で共有 (`docs/img/`)
+
+#### Fixed
+- **CRITICAL問題修正**: 多言語ドキュメントのクロスリファレンスエラーを修正
+  - **画像パス修正**: 全CONTENTS.mdファイル（5言語版+日本語版）の画像リンクを修正
+    - 修正前: `contents/docs/img/making.png` (存在しないパス)
+    - 修正後: `../img/making.png` (正しいパス)
+    - 対象ファイル: docs/CONTENTS.md, docs/en/CONTENTS.md, docs/zh/CONTENTS.md, docs/es/CONTENTS.md, docs/fr/CONTENTS.md
+  - **ロシア語版リンク削除**: 中国語版ドキュメント（10ファイル）から未実装のロシア語版へのリンクを削除
+    - 対象: docs/zh/00_index.md 〜 09_utility_functions.md
+  - **言語表記統一**: README.md冒頭の言語切替リンクを現地語表記に統一
+    - 修正前: `[Spanish]`, `[French]`, `[German]`
+    - 修正後: `[Español]`, `[Français]`, `[Deutsch]`
+  - **画像ファイルコピー**: `contents/docs/img/making.png` → `docs/img/making.png`
+- **README.md更新**: 冒頭に多言語切替リンクを追加
+
 ### v3.1.2 (2025-11-18) - ドキュメント体裁修正
 
 #### Fixed

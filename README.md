@@ -1,6 +1,6 @@
 ﻿# u5 EasyScripter Node
 
-**Languages**: [English](docs/en/README.md) | [中文](docs/zh/README.md) | [Spanish](docs/es/README.md) | [French](docs/fr/README.md) | [German](docs/de/README.md)
+**Languages**: [English](docs/en/README.md) | [中文](docs/zh/README.md) | [Español](docs/es/README.md) | [Français](docs/fr/README.md) | [Deutsch](docs/de/README.md)
 
 ## これは何？
 - ComfyUI上で、VBAライクの**簡単スクリプトを動かせる**カスタムノードです

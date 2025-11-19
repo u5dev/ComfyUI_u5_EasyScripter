@@ -1,0 +1,143 @@
+/* EasyScripter Custom Styles */
+
+/* スクリプト入力エリア（可読性向上） */
+.easyscripter-input {
+    background-color: #1e1e1e !important;
+    color: #e0e0e0 !important;  /* コントラスト向上 */
+    border: 1px solid #3c3c3c !important;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+    font-size: 14px !important;  /* 可読性向上 */
+    line-height: 1.6 !important;  /* 可読性向上 */
+    padding: 8px !important;
+}
+
+/* 出力表示エリア（可読性向上） */
+.easyscripter-output {
+    background-color: #252526 !important;  /* コントラスト向上 */
+    color: #d4d4d4 !important;  /* コントラスト向上（緑から白系へ） */
+    border: 1px solid #3c3c3c !important;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    padding: 8px !important;
+    cursor: default !important;
+}
+
+/* 出力エリアのプレースホルダー色（実行後と同じ緑色） */
+.easyscripter-output::placeholder {
+    color: #66ff66 !important;
+    opacity: 0.6 !important;  /* 少し薄めにして初期状態と実行後を区別 */
+}
+
+/* 出力エリアWrapper */
+.easyscripter-output-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* 出力エリアヘッダー（折りたたみ可能） */
+.easyscripter-output-header {
+    cursor: pointer;
+    user-select: none;
+    padding: 4px 8px;
+    background-color: #2d2d30;
+    border-bottom: 1px solid #3e3e42;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #cccccc;
+    transition: background-color 0.2s;
+}
+
+.easyscripter-output-header:hover {
+    background-color: #3e3e42;
+}
+
+/* 折りたたみインジケータアイコン */
+.easyscripter-toggle-icon {
+    display: inline-block;
+    margin-right: 6px;
+    transition: transform 0.2s;
+    font-size: 10px;
+    color: #cccccc;
+}
+
+/* ダークモード対応（可読性向上） */
+@media (prefers-color-scheme: dark) {
+    .easyscripter-input {
+        background-color: #1e1e1e !important;
+        color: #e0e0e0 !important;  /* コントラスト向上 */
+    }
+
+    .easyscripter-output {
+        background-color: #252526 !important;  /* コントラスト向上 */
+        color: #d4d4d4 !important;  /* コントラスト向上 */
+    }
+
+    .easyscripter-output-header {
+        background-color: #2d2d30;
+        color: #cccccc;
+    }
+
+    .easyscripter-output-header:hover {
+        background-color: #3e3e42;
+    }
+}
+
+/* ライトモード対応（可読性向上） */
+@media (prefers-color-scheme: light) {
+    .easyscripter-input {
+        background-color: #f5f5f5 !important;
+        color: #333333 !important;
+        border: 1px solid #cccccc !important;
+    }
+
+    .easyscripter-output {
+        background-color: #ffffff !important;  /* コントラスト向上 */
+        color: #333333 !important;  /* コントラスト向上 */
+        border: 1px solid #cccccc !important;
+    }
+
+    .easyscripter-output-header {
+        background-color: #e0e0e0;
+        color: #333333;
+        border-bottom: 1px solid #cccccc;
+    }
+
+    .easyscripter-output-header:hover {
+        background-color: #d0d0d0;
+    }
+
+    .easyscripter-toggle-icon {
+        color: #333333;
+    }
+}
+
+/* フォーカス時のスタイル */
+.easyscripter-input:focus {
+    outline: 1px solid #007acc !important;
+    border-color: #007acc !important;
+}
+
+/* スクロールバーのスタイル */
+.easyscripter-input::-webkit-scrollbar,
+.easyscripter-output::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.easyscripter-input::-webkit-scrollbar-track,
+.easyscripter-output::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+.easyscripter-input::-webkit-scrollbar-thumb,
+.easyscripter-output::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 5px;
+}
+
+.easyscripter-input::-webkit-scrollbar-thumb:hover,
+.easyscripter-output::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}

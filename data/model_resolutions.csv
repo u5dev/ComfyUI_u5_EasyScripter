@@ -1,0 +1,873 @@
+model_key,model_display_name,aliases,version,width,height,aspect_ratio,description
+sd15,Stable Diffusion v1.5,stable diffusion|sd|sd1.5|sd v1.5,1.5,512,512,1:1,ネイティブ512²（正方形）
+sd15,Stable Diffusion v1.5,stable diffusion|sd|sd1.5|sd v1.5,1.5,640,448,3:2,横長3:2（≈512²; 64の倍数）
+sd15,Stable Diffusion v1.5,stable diffusion|sd|sd1.5|sd v1.5,1.5,448,640,2:3,縦長2:3（≈512²; 64の倍数）
+sd15,Stable Diffusion v1.5,stable diffusion|sd|sd1.5|sd v1.5,1.5,576,448,4:3,横長4:3（≈512²; 64の倍数）
+sd15,Stable Diffusion v1.5,stable diffusion|sd|sd1.5|sd v1.5,1.5,448,576,3:4,縦長3:4（≈512²; 64の倍数）
+sd15,Stable Diffusion v1.5,stable diffusion|sd|sd1.5|sd v1.5,1.5,704,384,16:9,横長16:9（≈512²; 64の倍数）
+sd15,Stable Diffusion v1.5,stable diffusion|sd|sd1.5|sd v1.5,1.5,384,704,9:16,縦長9:16（≈512²; 64の倍数）
+sd21,Stable Diffusion 2.1 (base),stable diffusion 2.1|sd2.1|sd 2.1|sd2|sd 2,2.1,768,768,1:1,ネイティブ768²（正方形）
+sd21,Stable Diffusion 2.1 (base),stable diffusion 2.1|sd2.1|sd 2.1|sd2|sd 2,2.1,960,640,3:2,横長3:2（≈768²; 64の倍数）
+sd21,Stable Diffusion 2.1 (base),stable diffusion 2.1|sd2.1|sd 2.1|sd2|sd 2,2.1,640,960,2:3,縦長2:3（≈768²; 64の倍数）
+sd21,Stable Diffusion 2.1 (base),stable diffusion 2.1|sd2.1|sd 2.1|sd2|sd 2,2.1,896,640,4:3,横長4:3（≈768²; 64の倍数）
+sd21,Stable Diffusion 2.1 (base),stable diffusion 2.1|sd2.1|sd 2.1|sd2|sd 2,2.1,640,896,3:4,縦長3:4（≈768²; 64の倍数）
+sd21,Stable Diffusion 2.1 (base),stable diffusion 2.1|sd2.1|sd 2.1|sd2|sd 2,2.1,1024,576,16:9,横長16:9（=768²; 64の倍数）
+sd21,Stable Diffusion 2.1 (base),stable diffusion 2.1|sd2.1|sd 2.1|sd2|sd 2,2.1,576,1024,9:16,縦長9:16（=768²; 64の倍数）
+sdxl,SDXL 1.0 (base),sdxl|stable diffusion xl|xl,1.0,1024,1024,1:1,ネイティブ1024²（正方形）
+sdxl,SDXL 1.0 (base),sdxl|stable diffusion xl|xl,1.0,1280,832,3:2,横長3:2（≈1MP; 64の倍数）
+sdxl,SDXL 1.0 (base),sdxl|stable diffusion xl|xl,1.0,832,1280,2:3,縦長2:3（≈1MP; 64の倍数）
+sdxl,SDXL 1.0 (base),sdxl|stable diffusion xl|xl,1.0,1152,896,4:3,横長4:3（SDXL比率バケット）
+sdxl,SDXL 1.0 (base),sdxl|stable diffusion xl|xl,1.0,896,1152,3:4,縦長3:4（SDXL比率バケット）
+sdxl,SDXL 1.0 (base),sdxl|stable diffusion xl|xl,1.0,1344,768,16:9,横長16:9（SDXL比率バケット）
+sdxl,SDXL 1.0 (base),sdxl|stable diffusion xl|xl,1.0,768,1344,9:16,縦長9:16（SDXL比率バケット）
+sd3,Stable Diffusion 3,stable diffusion 3|sd3|sd 3,3.0,1024,1024,1:1,推奨約1MP帯（=1024²）
+sd3,Stable Diffusion 3,stable diffusion 3|sd3|sd 3,3.0,1280,832,3:2,横長3:2（≈1MP; 64の倍数）
+sd3,Stable Diffusion 3,stable diffusion 3|sd3|sd 3,3.0,832,1280,2:3,縦長2:3（≈1MP; 64の倍数）
+sd3,Stable Diffusion 3,stable diffusion 3|sd3|sd 3,3.0,1152,896,4:3,横長4:3（≈1MP; 64の倍数）
+sd3,Stable Diffusion 3,stable diffusion 3|sd3|sd 3,3.0,896,1152,3:4,縦長3:4（≈1MP; 64の倍数）
+sd3,Stable Diffusion 3,stable diffusion 3|sd3|sd 3,3.0,1344,768,16:9,横長16:9（≈1MP; 64の倍数）
+sd3,Stable Diffusion 3,stable diffusion 3|sd3|sd 3,3.0,768,1344,9:16,縦長9:16（≈1MP; 64の倍数）
+sd35,Stable Diffusion 3.5,stable diffusion 3.5|sd3.5|sd 3.5,3.5,1024,1024,1:1,推奨約1MP帯（3.5 Large最適）
+sd35,Stable Diffusion 3.5,stable diffusion 3.5|sd3.5|sd 3.5,3.5,1280,832,3:2,横長3:2（≈1MP; 64の倍数）
+sd35,Stable Diffusion 3.5,stable diffusion 3.5|sd3.5|sd 3.5,3.5,832,1280,2:3,縦長2:3（≈1MP; 64の倍数）
+sd35,Stable Diffusion 3.5,stable diffusion 3.5|sd3.5|sd 3.5,3.5,1152,896,4:3,横長4:3（≈1MP; 64の倍数）
+sd35,Stable Diffusion 3.5,stable diffusion 3.5|sd3.5|sd 3.5,3.5,896,1152,3:4,縦長3:4（≈1MP; 64の倍数）
+sd35,Stable Diffusion 3.5,stable diffusion 3.5|sd3.5|sd 3.5,3.5,1344,768,16:9,横長16:9（≈1MP; 64の倍数）
+sd35,Stable Diffusion 3.5,stable diffusion 3.5|sd3.5|sd 3.5,3.5,768,1344,9:16,縦長9:16（≈1MP; 64の倍数）
+hunyuan_dit,Hunyuan-DiT v1.x,hunyuan|hunyuan-dit|hunyuandit,1.0,1024,1024,1:1,公式解像度ビニング標準枠
+hunyuan_dit,Hunyuan-DiT v1.x,hunyuan|hunyuan-dit|hunyuandit,1.0,1280,1280,1:1,公式対応の正方形上限枠
+hunyuan_dit,Hunyuan-DiT v1.x,hunyuan|hunyuan-dit|hunyuandit,1.0,1280,960,4:3,横長4:3（公式バケット）
+hunyuan_dit,Hunyuan-DiT v1.x,hunyuan|hunyuan-dit|hunyuandit,1.0,1152,864,4:3,横長4:3（公式バケット）
+hunyuan_dit,Hunyuan-DiT v1.x,hunyuan|hunyuan-dit|hunyuandit,1.0,1024,768,4:3,横長4:3（公式バケット）
+hunyuan_dit,Hunyuan-DiT v1.x,hunyuan|hunyuan-dit|hunyuandit,1.0,960,1280,3:4,縦長3:4（公式バケット）
+hunyuan_dit,Hunyuan-DiT v1.x,hunyuan|hunyuan-dit|hunyuandit,1.0,864,1152,3:4,縦長3:4（公式バケット）
+hunyuan_dit,Hunyuan-DiT v1.x,hunyuan|hunyuan-dit|hunyuandit,1.0,768,1024,3:4,縦長3:4（公式バケット）
+hunyuan_dit,Hunyuan-DiT v1.x,hunyuan|hunyuan-dit|hunyuandit,1.0,1280,768,16:9,横長16:9（公式バケット）
+hunyuan_dit,Hunyuan-DiT v1.x,hunyuan|hunyuan-dit|hunyuandit,1.0,768,1280,9:16,縦長9:16（公式バケット）
+kandinsky22,Kandinsky 2.2,kandinsky 2.2|kandinsky2.2|kandinsky 2|kandinsky2,2.2,1024,1024,1:1,最適化1024²（多比率対応）
+kandinsky22,Kandinsky 2.2,kandinsky 2.2|kandinsky2.2|kandinsky 2|kandinsky2,2.2,1280,832,3:2,横長3:2（≈1MP; 64の倍数）
+kandinsky22,Kandinsky 2.2,kandinsky 2.2|kandinsky2.2|kandinsky 2|kandinsky2,2.2,832,1280,2:3,縦長2:3（≈1MP; 64の倍数）
+kandinsky22,Kandinsky 2.2,kandinsky 2.2|kandinsky2.2|kandinsky 2|kandinsky2,2.2,1152,896,4:3,横長4:3（≈1MP）
+kandinsky22,Kandinsky 2.2,kandinsky 2.2|kandinsky2.2|kandinsky 2|kandinsky2,2.2,896,1152,3:4,縦長3:4（≈1MP）
+kandinsky22,Kandinsky 2.2,kandinsky 2.2|kandinsky2.2|kandinsky 2|kandinsky2,2.2,1344,768,16:9,横長16:9（≈1MP）
+kandinsky22,Kandinsky 2.2,kandinsky 2.2|kandinsky2.2|kandinsky 2|kandinsky2,2.2,768,1344,9:16,縦長9:16（≈1MP）
+pixart,PixArt-α/δ,pixart|pixart-α|pixart-δ|pixartα|pixartδ,1.0,1024,1024,1:1,1024px対応（Diffusers記載）
+pixart,PixArt-α/δ,pixart|pixart-α|pixart-δ|pixartα|pixartδ,1.0,1280,832,3:2,横長3:2（≈1MP）
+pixart,PixArt-α/δ,pixart|pixart-α|pixart-δ|pixartα|pixartδ,1.0,832,1280,2:3,縦長2:3（≈1MP）
+pixart,PixArt-α/δ,pixart|pixart-α|pixart-δ|pixartα|pixartδ,1.0,1152,896,4:3,横長4:3（≈1MP）
+pixart,PixArt-α/δ,pixart|pixart-α|pixart-δ|pixartα|pixartδ,1.0,896,1152,3:4,縦長3:4（≈1MP）
+pixart,PixArt-α/δ,pixart|pixart-α|pixart-δ|pixartα|pixartδ,1.0,1344,768,16:9,横長16:9（≈1MP）
+pixart,PixArt-α/δ,pixart|pixart-α|pixart-δ|pixartα|pixartδ,1.0,768,1344,9:16,縦長9:16（≈1MP）
+playground,Playground v2.5,playground|play,2.5,1024,1024,1:1,公開重み1024px aesthetic
+playground,Playground v2.5,playground|play,2.5,1280,832,3:2,横長3:2（≈1MP）
+playground,Playground v2.5,playground|play,2.5,832,1280,2:3,縦長2:3（≈1MP）
+playground,Playground v2.5,playground|play,2.5,1152,896,4:3,横長4:3（≈1MP）
+playground,Playground v2.5,playground|play,2.5,896,1152,3:4,縦長3:4（≈1MP）
+playground,Playground v2.5,playground|play,2.5,1344,768,16:9,横長16:9（≈1MP）
+playground,Playground v2.5,playground|play,2.5,768,1344,9:16,縦長9:16（≈1MP）
+flux1,FLUX.1 (dev/pro),flux|flux.1|flux1|flux.1dev|flux.1pro,1.0,1024,1024,1:1,ネイティブ想定≈1MP帯
+flux1,FLUX.1 (dev/pro),flux|flux.1|flux1|flux.1dev|flux.1pro,1.0,1280,832,3:2,3:2 ≈1MP; 64の倍数
+flux1,FLUX.1 (dev/pro),flux|flux.1|flux1|flux.1dev|flux.1pro,1.0,832,1280,2:3,2:3 ≈1MP; 64の倍数
+flux1,FLUX.1 (dev/pro),flux|flux.1|flux1|flux.1dev|flux.1pro,1.0,1152,896,4:3,4:3 ≈1MP; 64の倍数
+flux1,FLUX.1 (dev/pro),flux|flux.1|flux1|flux.1dev|flux.1pro,1.0,896,1152,3:4,3:4 ≈1MP; 64の倍数
+flux1,FLUX.1 (dev/pro),flux|flux.1|flux1|flux.1dev|flux.1pro,1.0,1344,768,16:9,16:9 ≈1MP; 64の倍数
+flux1,FLUX.1 (dev/pro),flux|flux.1|flux1|flux.1dev|flux.1pro,1.0,768,1344,9:16,9:16 ≈1MP; 64の倍数
+stable_cascade,Stable Cascade,stable cascade|stablecascade|cascade,1.0,1024,1024,1:1,圧縮24×24≒1024²基準
+stable_cascade,Stable Cascade,stable cascade|stablecascade|cascade,1.0,1280,832,3:2,3:2 ≈1MP; バケット運用
+stable_cascade,Stable Cascade,stable cascade|stablecascade|cascade,1.0,832,1280,2:3,2:3 ≈1MP
+stable_cascade,Stable Cascade,stable cascade|stablecascade|cascade,1.0,1152,896,4:3,4:3 ≈1MP
+stable_cascade,Stable Cascade,stable cascade|stablecascade|cascade,1.0,896,1152,3:4,3:4 ≈1MP
+stable_cascade,Stable Cascade,stable cascade|stablecascade|cascade,1.0,1344,768,16:9,16:9 ≈1MP
+stable_cascade,Stable Cascade,stable cascade|stablecascade|cascade,1.0,768,1344,9:16,9:16 ≈1MP
+deepfloyd_if,DeepFloyd IF,deepfloyd|deepfloyd if|deepfloydif,1.0,1024,1024,1:1,最終段256→1024のSR
+deepfloyd_if,DeepFloyd IF,deepfloyd|deepfloyd if|deepfloydif,1.0,1280,832,3:2,3:2 ≈1MP; 実運用可
+deepfloyd_if,DeepFloyd IF,deepfloyd|deepfloyd if|deepfloydif,1.0,832,1280,2:3,2:3 ≈1MP
+deepfloyd_if,DeepFloyd IF,deepfloyd|deepfloyd if|deepfloydif,1.0,1152,896,4:3,4:3 ≈1MP
+deepfloyd_if,DeepFloyd IF,deepfloyd|deepfloyd if|deepfloydif,1.0,896,1152,3:4,3:4 ≈1MP
+deepfloyd_if,DeepFloyd IF,deepfloyd|deepfloyd if|deepfloydif,1.0,1344,768,16:9,16:9 ≈1MP
+deepfloyd_if,DeepFloyd IF,deepfloyd|deepfloyd if|deepfloydif,1.0,768,1344,9:16,9:16 ≈1MP
+sdxl_turbo,SDXL Turbo,sdxl turbo|sdxlturbo|turbo,1.0,512,512,1:1,公式既定=最良512²
+sdxl_turbo,SDXL Turbo,sdxl turbo|sdxlturbo|turbo,1.0,640,448,3:2,3:2 ≈512²; 64の倍数
+sdxl_turbo,SDXL Turbo,sdxl turbo|sdxlturbo|turbo,1.0,448,640,2:3,2:3 ≈512²
+sdxl_turbo,SDXL Turbo,sdxl turbo|sdxlturbo|turbo,1.0,576,448,4:3,4:3 ≈512²
+sdxl_turbo,SDXL Turbo,sdxl turbo|sdxlturbo|turbo,1.0,448,576,3:4,3:4 ≈512²
+sdxl_turbo,SDXL Turbo,sdxl turbo|sdxlturbo|turbo,1.0,704,384,16:9,16:9 ≈512²
+sdxl_turbo,SDXL Turbo,sdxl turbo|sdxlturbo|turbo,1.0,384,704,9:16,9:16 ≈512²
+kandinsky3,Kandinsky 3,kandinsky 3|kandinsky3,3.0,1024,1024,1:1,最大解像度1024²
+kandinsky3,Kandinsky 3,kandinsky 3|kandinsky3,3.0,1280,832,3:2,3:2 ≈1MP
+kandinsky3,Kandinsky 3,kandinsky 3|kandinsky3,3.0,832,1280,2:3,2:3 ≈1MP
+kandinsky3,Kandinsky 3,kandinsky 3|kandinsky3,3.0,1152,896,4:3,4:3 ≈1MP
+kandinsky3,Kandinsky 3,kandinsky 3|kandinsky3,3.0,896,1152,3:4,3:4 ≈1MP
+kandinsky3,Kandinsky 3,kandinsky 3|kandinsky3,3.0,1344,768,16:9,16:9 ≈1MP
+kandinsky3,Kandinsky 3,kandinsky 3|kandinsky3,3.0,768,1344,9:16,9:16 ≈1MP
+wurstchen,Würstchen,wurstchen|wuerstchen,1.0,1024,1024,1:1,学習レンジ1024周辺
+wurstchen,Würstchen,wurstchen|wuerstchen,1.0,1280,832,3:2,3:2 ≈1MP
+wurstchen,Würstchen,wurstchen|wuerstchen,1.0,832,1280,2:3,2:3 ≈1MP
+wurstchen,Würstchen,wurstchen|wuerstchen,1.0,1152,896,4:3,4:3 ≈1MP
+wurstchen,Würstchen,wurstchen|wuerstchen,1.0,896,1152,3:4,3:4 ≈1MP
+wurstchen,Würstchen,wurstchen|wuerstchen,1.0,1344,768,16:9,16:9 ≈1MP
+wurstchen,Würstchen,wurstchen|wuerstchen,1.0,768,1344,9:16,9:16 ≈1MP
+hunyuan_image21,HunyuanImage-2.1,hunyuanimage|hunyuan image|hunyuanimage-2.1,2.1,2048,2048,1:1,2K(2048²)対応公式明記
+hunyuan_image21,HunyuanImage-2.1,hunyuanimage|hunyuan image|hunyuanimage-2.1,2.1,2496,1664,3:2,3:2 ≈2048²（64倍数丸め）
+hunyuan_image21,HunyuanImage-2.1,hunyuanimage|hunyuan image|hunyuanimage-2.1,2.1,1664,2496,2:3,2:3 ≈2048²
+hunyuan_image21,HunyuanImage-2.1,hunyuanimage|hunyuan image|hunyuanimage-2.1,2.1,2368,1792,4:3,4:3 ≈2048²
+hunyuan_image21,HunyuanImage-2.1,hunyuanimage|hunyuan image|hunyuanimage-2.1,2.1,1792,2368,3:4,3:4 ≈2048²
+hunyuan_image21,HunyuanImage-2.1,hunyuanimage|hunyuan image|hunyuanimage-2.1,2.1,2752,1536,16:9,16:9 ≈2048²
+hunyuan_image21,HunyuanImage-2.1,hunyuanimage|hunyuan image|hunyuanimage-2.1,2.1,1536,2752,9:16,9:16 ≈2048²
+waifu_diffusion15,Waifu Diffusion 1.5,waifu diffusion 1.5|waifudiffusion1.5|waifu 1.5|waifu1.5,1.5,512,512,1:1,SD1.5系基準512²
+waifu_diffusion15,Waifu Diffusion 1.5,waifu diffusion 1.5|waifudiffusion1.5|waifu 1.5|waifu1.5,1.5,640,448,3:2,3:2（≈512²）
+waifu_diffusion15,Waifu Diffusion 1.5,waifu diffusion 1.5|waifudiffusion1.5|waifu 1.5|waifu1.5,1.5,448,640,2:3,2:3（≈512²）
+waifu_diffusion15,Waifu Diffusion 1.5,waifu diffusion 1.5|waifudiffusion1.5|waifu 1.5|waifu1.5,1.5,576,448,4:3,4:3（≈512²）
+waifu_diffusion15,Waifu Diffusion 1.5,waifu diffusion 1.5|waifudiffusion1.5|waifu 1.5|waifu1.5,1.5,448,576,3:4,3:4（≈512²）
+waifu_diffusion15,Waifu Diffusion 1.5,waifu diffusion 1.5|waifudiffusion1.5|waifu 1.5|waifu1.5,1.5,704,384,16:9,16:9（≈512²）
+waifu_diffusion15,Waifu Diffusion 1.5,waifu diffusion 1.5|waifudiffusion1.5|waifu 1.5|waifu1.5,1.5,384,704,9:16,9:16（≈512²）
+openjourney,OpenJourney v4,openjourney|openjourney v4|openjourneyv4,4.0,512,512,1:1,SD1.5微調整512²基準
+openjourney,OpenJourney v4,openjourney|openjourney v4|openjourneyv4,4.0,640,448,3:2,3:2（≈512²）
+openjourney,OpenJourney v4,openjourney|openjourney v4|openjourneyv4,4.0,448,640,2:3,2:3（≈512²）
+openjourney,OpenJourney v4,openjourney|openjourney v4|openjourneyv4,4.0,576,448,4:3,4:3（≈512²）
+openjourney,OpenJourney v4,openjourney|openjourney v4|openjourneyv4,4.0,448,576,3:4,3:4（≈512²）
+openjourney,OpenJourney v4,openjourney|openjourney v4|openjourneyv4,4.0,704,384,16:9,16:9（≈512²）
+openjourney,OpenJourney v4,openjourney|openjourney v4|openjourneyv4,4.0,384,704,9:16,9:16（≈512²）
+dreamshaper8,DreamShaper 8,dreamshaper 8|dreamshaper8|dreamshaper,8.0,512,512,1:1,SD1.5微調整512²基準
+dreamshaper8,DreamShaper 8,dreamshaper 8|dreamshaper8|dreamshaper,8.0,640,448,3:2,3:2（≈512²）
+dreamshaper8,DreamShaper 8,dreamshaper 8|dreamshaper8|dreamshaper,8.0,448,640,2:3,2:3（≈512²）
+dreamshaper8,DreamShaper 8,dreamshaper 8|dreamshaper8|dreamshaper,8.0,576,448,4:3,4:3（≈512²）
+dreamshaper8,DreamShaper 8,dreamshaper 8|dreamshaper8|dreamshaper,8.0,448,576,3:4,3:4（≈512²）
+dreamshaper8,DreamShaper 8,dreamshaper 8|dreamshaper8|dreamshaper,8.0,704,384,16:9,16:9（≈512²）
+dreamshaper8,DreamShaper 8,dreamshaper 8|dreamshaper8|dreamshaper,8.0,384,704,9:16,9:16（≈512²）
+deliberate3,Deliberate v3,deliberate v3|deliberatev3|deliberate,3.0,512,512,1:1,SD1.5微調整512²基準
+deliberate3,Deliberate v3,deliberate v3|deliberatev3|deliberate,3.0,640,448,3:2,3:2（≈512²）
+deliberate3,Deliberate v3,deliberate v3|deliberatev3|deliberate,3.0,448,640,2:3,2:3（≈512²）
+deliberate3,Deliberate v3,deliberate v3|deliberatev3|deliberate,3.0,576,448,4:3,4:3（≈512²）
+deliberate3,Deliberate v3,deliberate v3|deliberatev3|deliberate,3.0,448,576,3:4,3:4（≈512²）
+deliberate3,Deliberate v3,deliberate v3|deliberatev3|deliberate,3.0,704,384,16:9,16:9（≈512²）
+deliberate3,Deliberate v3,deliberate v3|deliberatev3|deliberate,3.0,384,704,9:16,9:16（≈512²）
+realistic_vision6,Realistic Vision v6,realistic vision v6|realisticvisionv6|realistic vision|realisticvision,6.0,512,512,1:1,SD1.5系512²基準
+realistic_vision6,Realistic Vision v6,realistic vision v6|realisticvisionv6|realistic vision|realisticvision,6.0,640,448,3:2,3:2（≈512²）
+realistic_vision6,Realistic Vision v6,realistic vision v6|realisticvisionv6|realistic vision|realisticvision,6.0,448,640,2:3,2:3（≈512²）
+realistic_vision6,Realistic Vision v6,realistic vision v6|realisticvisionv6|realistic vision|realisticvision,6.0,576,448,4:3,4:3（≈512²）
+realistic_vision6,Realistic Vision v6,realistic vision v6|realisticvisionv6|realistic vision|realisticvision,6.0,448,576,3:4,3:4（≈512²）
+realistic_vision6,Realistic Vision v6,realistic vision v6|realisticvisionv6|realistic vision|realisticvision,6.0,704,384,16:9,16:9（≈512²）
+realistic_vision6,Realistic Vision v6,realistic vision v6|realisticvisionv6|realistic vision|realisticvision,6.0,384,704,9:16,9:16（≈512²）
+animagine_xl,Animagine XL,animagine xl|animaginexl|animagine,1.0,1024,1024,1:1,SDXL派生1024²基準
+animagine_xl,Animagine XL,animagine xl|animaginexl|animagine,1.0,1280,832,3:2,3:2（≈1MP）
+animagine_xl,Animagine XL,animagine xl|animaginexl|animagine,1.0,832,1280,2:3,2:3（≈1MP）
+animagine_xl,Animagine XL,animagine xl|animaginexl|animagine,1.0,1152,896,4:3,4:3（モデルカード掲載）
+animagine_xl,Animagine XL,animagine xl|animaginexl|animagine,1.0,896,1152,3:4,3:4（モデルカード掲載）
+animagine_xl,Animagine XL,animagine xl|animaginexl|animagine,1.0,1344,768,16:9,16:9（≈1MP）
+animagine_xl,Animagine XL,animagine xl|animaginexl|animagine,1.0,768,1344,9:16,9:16（≈1MP）
+waifu_diffusion_xl,Waifu Diffusion XL,waifu diffusion xl|waifudiffusionxl|waifu xl|waifuxl,1.0,1024,1024,1:1,SDXL派生1024²基準
+waifu_diffusion_xl,Waifu Diffusion XL,waifu diffusion xl|waifudiffusionxl|waifu xl|waifuxl,1.0,1280,832,3:2,3:2（≈1MP）
+waifu_diffusion_xl,Waifu Diffusion XL,waifu diffusion xl|waifudiffusionxl|waifu xl|waifuxl,1.0,832,1280,2:3,2:3（≈1MP）
+waifu_diffusion_xl,Waifu Diffusion XL,waifu diffusion xl|waifudiffusionxl|waifu xl|waifuxl,1.0,1152,896,4:3,4:3（≈1MP）
+waifu_diffusion_xl,Waifu Diffusion XL,waifu diffusion xl|waifudiffusionxl|waifu xl|waifuxl,1.0,896,1152,3:4,3:4（≈1MP）
+waifu_diffusion_xl,Waifu Diffusion XL,waifu diffusion xl|waifudiffusionxl|waifu xl|waifuxl,1.0,1344,768,16:9,16:9（≈1MP）
+waifu_diffusion_xl,Waifu Diffusion XL,waifu diffusion xl|waifudiffusionxl|waifu xl|waifuxl,1.0,768,1344,9:16,9:16（≈1MP）
+juggernaut_xl,Juggernaut XL,juggernaut xl|juggernautxl|juggernaut,1.0,1024,1024,1:1,作者≥1024推奨
+juggernaut_xl,Juggernaut XL,juggernaut xl|juggernautxl|juggernaut,1.0,1280,832,3:2,3:2（≈1MP）
+juggernaut_xl,Juggernaut XL,juggernaut xl|juggernautxl|juggernaut,1.0,832,1280,2:3,2:3（≈1MP）
+juggernaut_xl,Juggernaut XL,juggernaut xl|juggernautxl|juggernaut,1.0,1152,896,4:3,4:3（≈1MP）
+juggernaut_xl,Juggernaut XL,juggernaut xl|juggernautxl|juggernaut,1.0,896,1152,3:4,3:4（≈1MP）
+juggernaut_xl,Juggernaut XL,juggernaut xl|juggernautxl|juggernaut,1.0,1344,768,16:9,16:9（≈1MP）
+juggernaut_xl,Juggernaut XL,juggernaut xl|juggernautxl|juggernaut,1.0,768,1344,9:16,9:16（≈1MP）
+aam_xl,AAM XL AnimeMix,aam xl|aamxl|aam|animemix xl,1.0,1024,1024,1:1,SDXL派生1024²基準
+aam_xl,AAM XL AnimeMix,aam xl|aamxl|aam|animemix xl,1.0,1280,832,3:2,3:2（≈1MP）
+aam_xl,AAM XL AnimeMix,aam xl|aamxl|aam|animemix xl,1.0,832,1280,2:3,2:3（≈1MP）
+aam_xl,AAM XL AnimeMix,aam xl|aamxl|aam|animemix xl,1.0,1152,896,4:3,4:3（≈1MP）
+aam_xl,AAM XL AnimeMix,aam xl|aamxl|aam|animemix xl,1.0,896,1152,3:4,3:4（≈1MP）
+aam_xl,AAM XL AnimeMix,aam xl|aamxl|aam|animemix xl,1.0,1344,768,16:9,16:9（≈1MP）
+aam_xl,AAM XL AnimeMix,aam xl|aamxl|aam|animemix xl,1.0,768,1344,9:16,9:16（≈1MP）
+sdxl_lightning,SDXL Lightning,sdxl lightning|sdxllightning|lightning,1.0,1024,1024,1:1,1024px数ステップ公式説明
+sdxl_lightning,SDXL Lightning,sdxl lightning|sdxllightning|lightning,1.0,1280,832,3:2,3:2（≈1MP）
+sdxl_lightning,SDXL Lightning,sdxl lightning|sdxllightning|lightning,1.0,832,1280,2:3,2:3（≈1MP）
+sdxl_lightning,SDXL Lightning,sdxl lightning|sdxllightning|lightning,1.0,1152,896,4:3,4:3（≈1MP）
+sdxl_lightning,SDXL Lightning,sdxl lightning|sdxllightning|lightning,1.0,896,1152,3:4,3:4（≈1MP）
+sdxl_lightning,SDXL Lightning,sdxl lightning|sdxllightning|lightning,1.0,1344,768,16:9,16:9（≈1MP）
+sdxl_lightning,SDXL Lightning,sdxl lightning|sdxllightning|lightning,1.0,768,1344,9:16,9:16（≈1MP）
+dreamshaper_xl,DreamShaper XL,dreamshaper xl|dreamshaperxl,1.0,1024,1024,1:1,SDXL派生1024²基準
+dreamshaper_xl,DreamShaper XL,dreamshaper xl|dreamshaperxl,1.0,1280,832,3:2,3:2（≈1MP）
+dreamshaper_xl,DreamShaper XL,dreamshaper xl|dreamshaperxl,1.0,832,1280,2:3,2:3（≈1MP）
+dreamshaper_xl,DreamShaper XL,dreamshaper xl|dreamshaperxl,1.0,1152,896,4:3,4:3（≈1MP）
+dreamshaper_xl,DreamShaper XL,dreamshaper xl|dreamshaperxl,1.0,896,1152,3:4,3:4（≈1MP）
+dreamshaper_xl,DreamShaper XL,dreamshaper xl|dreamshaperxl,1.0,1344,768,16:9,16:9（≈1MP）
+dreamshaper_xl,DreamShaper XL,dreamshaper xl|dreamshaperxl,1.0,768,1344,9:16,9:16（≈1MP）
+sdxlbase,SDXL_base,SDXL_base,,1024,1024,1:1,SDXL公式のネイティブは1024²
+sdxlbase,SDXL_base,SDXL_base,,1280,832,20:13,3:2（SDXL標準バケット）
+sdxlbase,SDXL_base,SDXL_base,,832,1280,13:20,2:3（SDXL標準バケット）
+sdxlbase,SDXL_base,SDXL_base,,1152,896,9:7,4:3（SDXL標準バケット）
+sdxlbase,SDXL_base,SDXL_base,,896,1152,7:9,3:4（SDXL標準バケット）
+sdxlbase,SDXL_base,SDXL_base,,1344,768,7:4,16:9（SDXL標準バケット）
+sdxlbase,SDXL_base,SDXL_base,,768,1344,4:7,9:16（SDXL標準バケット）
+animaginexl3.0,Animagine XL 3.0,Animagine XL 3.0|AnimagineXL3.0,3.0,1024,1024,1:1,SDXL派生=1024²基準（3.0モデルカード）
+animaginexl3.0,Animagine XL 3.0,Animagine XL 3.0|AnimagineXL3.0,3.0,1280,832,20:13,3:2（SDXL標準バケット）
+animaginexl3.0,Animagine XL 3.0,Animagine XL 3.0|AnimagineXL3.0,3.0,832,1280,13:20,2:3（同上）
+animaginexl3.0,Animagine XL 3.0,Animagine XL 3.0|AnimagineXL3.0,3.0,1152,896,9:7,4:3（同上）
+animaginexl3.0,Animagine XL 3.0,Animagine XL 3.0|AnimagineXL3.0,3.0,896,1152,7:9,3:4（同上）
+animaginexl3.0,Animagine XL 3.0,Animagine XL 3.0|AnimagineXL3.0,3.0,1344,768,7:4,16:9（同上）
+animaginexl3.0,Animagine XL 3.0,Animagine XL 3.0|AnimagineXL3.0,3.0,768,1344,4:7,9:16（同上）
+animaginexl3.1,Animagine XL 3.1,Animagine XL 3.1|AnimagineXL3.1,3.1,1024,1024,1:1,SDXL派生=1024²基準（3.1モデルカード・説明）
+animaginexl3.1,Animagine XL 3.1,Animagine XL 3.1|AnimagineXL3.1,3.1,1280,832,20:13,3:2（SDXL標準バケット）
+animaginexl3.1,Animagine XL 3.1,Animagine XL 3.1|AnimagineXL3.1,3.1,832,1280,13:20,2:3（同上）
+animaginexl3.1,Animagine XL 3.1,Animagine XL 3.1|AnimagineXL3.1,3.1,1152,896,9:7,4:3（同上）
+animaginexl3.1,Animagine XL 3.1,Animagine XL 3.1|AnimagineXL3.1,3.1,896,1152,7:9,3:4（同上）
+animaginexl3.1,Animagine XL 3.1,Animagine XL 3.1|AnimagineXL3.1,3.1,1344,768,7:4,16:9（同上）
+animaginexl3.1,Animagine XL 3.1,Animagine XL 3.1|AnimagineXL3.1,3.1,768,1344,4:7,9:16（同上）
+stablediffusionxlanime,Stable-Diffusion-XL-Anime,Stable-Diffusion-XL-Anime|Stable_Diffusion_XL_Anime,,1024,1024,1:1,配布ページが「Animagine XL 3.1ベース参照」と明記→SDXL標準
+stablediffusionxlanime,Stable-Diffusion-XL-Anime,Stable-Diffusion-XL-Anime|Stable_Diffusion_XL_Anime,,1280,832,20:13,3:2（SDXL標準バケット）
+stablediffusionxlanime,Stable-Diffusion-XL-Anime,Stable-Diffusion-XL-Anime|Stable_Diffusion_XL_Anime,,832,1280,13:20,2:3（同上）
+stablediffusionxlanime,Stable-Diffusion-XL-Anime,Stable-Diffusion-XL-Anime|Stable_Diffusion_XL_Anime,,1152,896,9:7,4:3（同上）
+stablediffusionxlanime,Stable-Diffusion-XL-Anime,Stable-Diffusion-XL-Anime|Stable_Diffusion_XL_Anime,,896,1152,7:9,3:4（同上）
+stablediffusionxlanime,Stable-Diffusion-XL-Anime,Stable-Diffusion-XL-Anime|Stable_Diffusion_XL_Anime,,1344,768,7:4,16:9（同上）
+stablediffusionxlanime,Stable-Diffusion-XL-Anime,Stable-Diffusion-XL-Anime|Stable_Diffusion_XL_Anime,,768,1344,4:7,9:16（同上）
+shiratakimixxl,ShiratakiMix XL,ShiratakiMix XL|ShiratakiMixXL,,1024,1024,1:1,HFモデルカードでSDXL派生の配布先を案内→SDXL標準
+shiratakimixxl,ShiratakiMix XL,ShiratakiMix XL|ShiratakiMixXL,,1280,832,20:13,3:2（SDXL標準バケット）
+shiratakimixxl,ShiratakiMix XL,ShiratakiMix XL|ShiratakiMixXL,,832,1280,13:20,2:3（同上）
+shiratakimixxl,ShiratakiMix XL,ShiratakiMix XL|ShiratakiMixXL,,1152,896,9:7,4:3（同上）
+shiratakimixxl,ShiratakiMix XL,ShiratakiMix XL|ShiratakiMixXL,,896,1152,7:9,3:4（同上）
+shiratakimixxl,ShiratakiMix XL,ShiratakiMix XL|ShiratakiMixXL,,1344,768,7:4,16:9（同上）
+shiratakimixxl,ShiratakiMix XL,ShiratakiMix XL|ShiratakiMixXL,,768,1344,4:7,9:16（同上）
+ponydiffusionv6xl,PonyDiffusion V6 XL,PonyDiffusion V6 XL|PonyDiffusionV6XL,6,1024,1024,1:1,配布情報で「1024px推奨、SDXL解像度全般可」と明記
+ponydiffusionv6xl,PonyDiffusion V6 XL,PonyDiffusion V6 XL|PonyDiffusionV6XL,6,1280,832,20:13,3:2（SDXL標準バケット）
+ponydiffusionv6xl,PonyDiffusion V6 XL,PonyDiffusion V6 XL|PonyDiffusionV6XL,6,832,1280,13:20,2:3（同上）
+ponydiffusionv6xl,PonyDiffusion V6 XL,PonyDiffusion V6 XL|PonyDiffusionV6XL,6,1152,896,9:7,4:3（同上）
+ponydiffusionv6xl,PonyDiffusion V6 XL,PonyDiffusion V6 XL|PonyDiffusionV6XL,6,896,1152,7:9,3:4（同上）
+ponydiffusionv6xl,PonyDiffusion V6 XL,PonyDiffusion V6 XL|PonyDiffusionV6XL,6,1344,768,7:4,16:9（同上）
+ponydiffusionv6xl,PonyDiffusion V6 XL,PonyDiffusion V6 XL|PonyDiffusionV6XL,6,768,1344,4:7,9:16（同上）
+ponydiffusionforanime,PonyDiffusion for Anime,PonyDiffusion for Anime|PonyDiffusionforAnime,,1024,1024,1:1,配布ページにSDXL 1.0ベース表記→SDXL標準
+ponydiffusionforanime,PonyDiffusion for Anime,PonyDiffusion for Anime|PonyDiffusionforAnime,,1280,832,20:13,3:2（SDXL標準バケット）
+ponydiffusionforanime,PonyDiffusion for Anime,PonyDiffusion for Anime|PonyDiffusionforAnime,,832,1280,13:20,2:3（同上）
+ponydiffusionforanime,PonyDiffusion for Anime,PonyDiffusion for Anime|PonyDiffusionforAnime,,1152,896,9:7,4:3（同上）
+ponydiffusionforanime,PonyDiffusion for Anime,PonyDiffusion for Anime|PonyDiffusionforAnime,,896,1152,7:9,3:4（同上）
+ponydiffusionforanime,PonyDiffusion for Anime,PonyDiffusion for Anime|PonyDiffusionforAnime,,1344,768,7:4,16:9（同上）
+ponydiffusionforanime,PonyDiffusion for Anime,PonyDiffusion for Anime|PonyDiffusionforAnime,,768,1344,4:7,9:16（同上）
+aiponyanime,AiPonyAnime,AiPonyAnime,,1024,1024,1:1,HF/SeaArt等：Pony/SDXL系チェックポイントとして掲載→1024²基準
+aiponyanime,AiPonyAnime,AiPonyAnime,,1280,832,20:13,3:2（SDXL標準バケット）
+aiponyanime,AiPonyAnime,AiPonyAnime,,832,1280,13:20,2:3（同上）
+aiponyanime,AiPonyAnime,AiPonyAnime,,1152,896,9:7,4:3（同上）
+aiponyanime,AiPonyAnime,AiPonyAnime,,896,1152,7:9,3:4（同上）
+aiponyanime,AiPonyAnime,AiPonyAnime,,1344,768,7:4,16:9（同上）
+aiponyanime,AiPonyAnime,AiPonyAnime,,768,1344,4:7,9:16（同上）
+qwenimage,Qwen-Image,Qwen-Image|Qwen_Image,,1024,1024,1:1,公式Diffusers「既定=1024pxが最良」(正方形)
+qwenimage,Qwen-Image,Qwen-Image|Qwen_Image,,1280,832,20:13,3:2（≈1MP; 64の倍数）
+qwenimage,Qwen-Image,Qwen-Image|Qwen_Image,,832,1280,13:20,2:3（≈1MP; 64の倍数）
+qwenimage,Qwen-Image,Qwen-Image|Qwen_Image,,1152,896,9:7,4:3（≈1MP; 64の倍数）
+qwenimage,Qwen-Image,Qwen-Image|Qwen_Image,,896,1152,7:9,3:4（≈1MP; 64の倍数）
+qwenimage,Qwen-Image,Qwen-Image|Qwen_Image,,1344,768,7:4,16:9（≈1MP; 64の倍数）
+qwenimage,Qwen-Image,Qwen-Image|Qwen_Image,,768,1344,4:7,9:16（≈1MP; 64の倍数）
+qwenimageedit,Qwen-Image-Edit,Qwen-Image-Edit|Qwen_Image_Edit,,1024,1024,1:1,編集版もDiffusersで既定=1024pxが最良
+qwenimageedit,Qwen-Image-Edit,Qwen-Image-Edit|Qwen_Image_Edit,,1280,832,20:13,3:2（≈1MP; 64の倍数）
+qwenimageedit,Qwen-Image-Edit,Qwen-Image-Edit|Qwen_Image_Edit,,832,1280,13:20,2:3（≈1MP; 64の倍数）
+qwenimageedit,Qwen-Image-Edit,Qwen-Image-Edit|Qwen_Image_Edit,,1152,896,9:7,4:3（≈1MP; 64の倍数）
+qwenimageedit,Qwen-Image-Edit,Qwen-Image-Edit|Qwen_Image_Edit,,896,1152,7:9,3:4（≈1MP; 64の倍数）
+qwenimageedit,Qwen-Image-Edit,Qwen-Image-Edit|Qwen_Image_Edit,,1344,768,7:4,16:9（≈1MP; 64の倍数）
+qwenimageedit,Qwen-Image-Edit,Qwen-Image-Edit|Qwen_Image_Edit,,768,1344,4:7,9:16（≈1MP; 64の倍数）
+qwenimageedit2509,Qwen-Image-Edit-2509,Qwen-Image-Edit-2509|Qwen_Image_Edit_2509,,1024,1024,1:1,Diffusersに公式掲載（Edit Plus）。デフォルト=1024px
+qwenimageedit2509,Qwen-Image-Edit-2509,Qwen-Image-Edit-2509|Qwen_Image_Edit_2509,,1280,832,20:13,3:2（≈1MP; 64の倍数）
+qwenimageedit2509,Qwen-Image-Edit-2509,Qwen-Image-Edit-2509|Qwen_Image_Edit_2509,,832,1280,13:20,2:3（≈1MP; 64の倍数）
+qwenimageedit2509,Qwen-Image-Edit-2509,Qwen-Image-Edit-2509|Qwen_Image_Edit_2509,,1152,896,9:7,4:3（≈1MP; 64の倍数）
+qwenimageedit2509,Qwen-Image-Edit-2509,Qwen-Image-Edit-2509|Qwen_Image_Edit_2509,,896,1152,7:9,3:4（≈1MP; 64の倍数）
+qwenimageedit2509,Qwen-Image-Edit-2509,Qwen-Image-Edit-2509|Qwen_Image_Edit_2509,,1344,768,7:4,16:9（≈1MP; 64の倍数）
+qwenimageedit2509,Qwen-Image-Edit-2509,Qwen-Image-Edit-2509|Qwen_Image_Edit_2509,,768,1344,4:7,9:16（≈1MP; 64の倍数）
+hunyuandit,Hunyuan-DiT,Hunyuan-DiT|Hunyuan_DiT,,1024,1024,1:1,Diffusers：解像度ビニング有効＆デフォルト=1024（original_size）
+hunyuandit,Hunyuan-DiT,Hunyuan-DiT|Hunyuan_DiT,,1280,832,20:13,3:2（ビニング向け1MP帯; 64の倍数）
+hunyuandit,Hunyuan-DiT,Hunyuan-DiT|Hunyuan_DiT,,832,1280,13:20,2:3（同上）
+hunyuandit,Hunyuan-DiT,Hunyuan-DiT|Hunyuan_DiT,,1152,896,9:7,4:3（同上）
+hunyuandit,Hunyuan-DiT,Hunyuan-DiT|Hunyuan_DiT,,896,1152,7:9,3:4（同上）
+hunyuandit,Hunyuan-DiT,Hunyuan-DiT|Hunyuan_DiT,,1344,768,7:4,16:9（同上）
+hunyuandit,Hunyuan-DiT,Hunyuan-DiT|Hunyuan_DiT,,768,1344,4:7,9:16（同上）
+hunyuanimage2.1,HunyuanImage-2.1,HunyuanImage-2.1|HunyuanImage_2.1,2.1,2048,2048,1:1,「2K専用」を公式READMEが明記（1:1）
+hunyuanimage2.1,HunyuanImage-2.1,HunyuanImage-2.1|HunyuanImage_2.1,2.1,2496,1664,3:2,3:2（=2048²の面積維持・64の倍数）
+hunyuanimage2.1,HunyuanImage-2.1,HunyuanImage-2.1|HunyuanImage_2.1,2.1,1664,2496,2:3,2:3（=2048²の面積維持・64の倍数）
+hunyuanimage2.1,HunyuanImage-2.1,HunyuanImage-2.1|HunyuanImage_2.1,2.1,2368,1792,37:28,4:3（=2048²の面積維持・64の倍数）
+hunyuanimage2.1,HunyuanImage-2.1,HunyuanImage-2.1|HunyuanImage_2.1,2.1,1792,2368,28:37,3:4（=2048²の面積維持・64の倍数）
+hunyuanimage2.1,HunyuanImage-2.1,HunyuanImage-2.1|HunyuanImage_2.1,2.1,2560,1536,5:3,16:9（公式例）
+hunyuanimage2.1,HunyuanImage-2.1,HunyuanImage-2.1|HunyuanImage_2.1,2.1,1536,2560,3:5,9:16（=2048²の面積維持・64の倍数）
+hunyuanimage3.0,HunyuanImage-3.0,HunyuanImage-3.0|HunyuanImage_3.0,3.0,1024,1024,1:1,公式は固定推奨なし：「image-size=auto」または「指定」を明記
+hunyuanimage3.0,HunyuanImage-3.0,HunyuanImage-3.0|HunyuanImage_3.0,3.0,2048,2048,1:1,（指定時の代表例）2K帯の正方形
+hunyuanimage3.0,HunyuanImage-3.0,HunyuanImage-3.0|HunyuanImage_3.0,3.0,2496,1664,3:2,（指定例）3:2 = 2K面積相当・64の倍数
+hunyuanimage3.0,HunyuanImage-3.0,HunyuanImage-3.0|HunyuanImage_3.0,3.0,1664,2496,2:3,（指定例）2:3 = 同上
+hunyuanimage3.0,HunyuanImage-3.0,HunyuanImage-3.0|HunyuanImage_3.0,3.0,2368,1792,37:28,（指定例）4:3 = 同上
+hunyuanimage3.0,HunyuanImage-3.0,HunyuanImage-3.0|HunyuanImage_3.0,3.0,1792,2368,28:37,（指定例）3:4 = 同上
+hunyuanimage3.0,HunyuanImage-3.0,HunyuanImage-3.0|HunyuanImage_3.0,3.0,2560,1536,5:3,（指定例）16:9 = 同上
+hunyuanimage3.0,HunyuanImage-3.0,HunyuanImage-3.0|HunyuanImage_3.0,3.0,1536,2560,3:5,（指定例）9:16 = 同上
+chilloutmix,ChilloutMix,ChilloutMix,,512,512,1:1,SD1.5系基準解像度（512²）; 8の倍数/実運用は64倍数
+chilloutmix,ChilloutMix,ChilloutMix,,640,448,10:7,3:2（≈512²）
+chilloutmix,ChilloutMix,ChilloutMix,,448,640,7:10,2:3（≈512²）
+chilloutmix,ChilloutMix,ChilloutMix,,576,448,9:7,4:3（≈512²）
+chilloutmix,ChilloutMix,ChilloutMix,,448,576,7:9,3:4（≈512²）
+chilloutmix,ChilloutMix,ChilloutMix,,704,384,11:6,16:9（≈512²）
+chilloutmix,ChilloutMix,ChilloutMix,,384,704,6:11,9:16（≈512²）
+chilledremix,chilled_remix,chilled_remix,,512,512,1:1,SD1.5系基準解像度（512²）
+chilledremix,chilled_remix,chilled_remix,,640,448,10:7,3:2（≈512²）
+chilledremix,chilled_remix,chilled_remix,,448,640,7:10,2:3（≈512²）
+chilledremix,chilled_remix,chilled_remix,,576,448,9:7,4:3（≈512²）
+chilledremix,chilled_remix,chilled_remix,,448,576,7:9,3:4（≈512²）
+chilledremix,chilled_remix,chilled_remix,,704,384,11:6,16:9（≈512²）
+chilledremix,chilled_remix,chilled_remix,,384,704,6:11,9:16（≈512²）
+bra,BRA (Beautiful Realistic Asians),BRA (Beautiful Realistic Asians)|BRA|BRA(BeautifulRealisticAsians),,512,512,1:1,SD1.5系基準解像度（512²）
+bra,BRA (Beautiful Realistic Asians),BRA (Beautiful Realistic Asians)|BRA|BRA(BeautifulRealisticAsians),,640,448,10:7,3:2（≈512²）
+bra,BRA (Beautiful Realistic Asians),BRA (Beautiful Realistic Asians)|BRA|BRA(BeautifulRealisticAsians),,448,640,7:10,2:3（≈512²）
+bra,BRA (Beautiful Realistic Asians),BRA (Beautiful Realistic Asians)|BRA|BRA(BeautifulRealisticAsians),,576,448,9:7,4:3（≈512²）
+bra,BRA (Beautiful Realistic Asians),BRA (Beautiful Realistic Asians)|BRA|BRA(BeautifulRealisticAsians),,448,576,7:9,3:4（≈512²）
+bra,BRA (Beautiful Realistic Asians),BRA (Beautiful Realistic Asians)|BRA|BRA(BeautifulRealisticAsians),,704,384,11:6,16:9（≈512²）
+bra,BRA (Beautiful Realistic Asians),BRA (Beautiful Realistic Asians)|BRA|BRA(BeautifulRealisticAsians),,384,704,6:11,9:16（≈512²）
+jsr,JSR (Japanese Style Realistic),JSR (Japanese Style Realistic)|JSR|JSR(JapaneseStyleRealistic),,512,512,1:1,SD1.5系基準解像度（512²）
+jsr,JSR (Japanese Style Realistic),JSR (Japanese Style Realistic)|JSR|JSR(JapaneseStyleRealistic),,640,448,10:7,3:2（≈512²）
+jsr,JSR (Japanese Style Realistic),JSR (Japanese Style Realistic)|JSR|JSR(JapaneseStyleRealistic),,448,640,7:10,2:3（≈512²）
+jsr,JSR (Japanese Style Realistic),JSR (Japanese Style Realistic)|JSR|JSR(JapaneseStyleRealistic),,576,448,9:7,4:3（≈512²）
+jsr,JSR (Japanese Style Realistic),JSR (Japanese Style Realistic)|JSR|JSR(JapaneseStyleRealistic),,448,576,7:9,3:4（≈512²）
+jsr,JSR (Japanese Style Realistic),JSR (Japanese Style Realistic)|JSR|JSR(JapaneseStyleRealistic),,704,384,11:6,16:9（≈512²）
+jsr,JSR (Japanese Style Realistic),JSR (Japanese Style Realistic)|JSR|JSR(JapaneseStyleRealistic),,384,704,6:11,9:16（≈512²）
+bracingevomix,BracingEvoMix,BracingEvoMix,,512,512,1:1,SD1.5系基準解像度（512²）
+bracingevomix,BracingEvoMix,BracingEvoMix,,640,448,10:7,3:2（≈512²）
+bracingevomix,BracingEvoMix,BracingEvoMix,,448,640,7:10,2:3（≈512²）
+bracingevomix,BracingEvoMix,BracingEvoMix,,576,448,9:7,4:3（≈512²）
+bracingevomix,BracingEvoMix,BracingEvoMix,,448,576,7:9,3:4（≈512²）
+bracingevomix,BracingEvoMix,BracingEvoMix,,704,384,11:6,16:9（≈512²）
+bracingevomix,BracingEvoMix,BracingEvoMix,,384,704,6:11,9:16（≈512²）
+majicmixrealistic,majicMIX realistic,majicMIX realistic|majicMIXrealistic,,512,512,1:1,SD1.5系基準解像度（512²）
+majicmixrealistic,majicMIX realistic,majicMIX realistic|majicMIXrealistic,,640,448,10:7,3:2（≈512²）
+majicmixrealistic,majicMIX realistic,majicMIX realistic|majicMIXrealistic,,448,640,7:10,2:3（≈512²）
+majicmixrealistic,majicMIX realistic,majicMIX realistic|majicMIXrealistic,,576,448,9:7,4:3（≈512²）
+majicmixrealistic,majicMIX realistic,majicMIX realistic|majicMIXrealistic,,448,576,7:9,3:4（≈512²）
+majicmixrealistic,majicMIX realistic,majicMIX realistic|majicMIXrealistic,,704,384,11:6,16:9（≈512²）
+majicmixrealistic,majicMIX realistic,majicMIX realistic|majicMIXrealistic,,384,704,6:11,9:16（≈512²）
+xxmix9realistic,XXMix_9realistic (SDXL),XXMix_9realistic (SDXL)|XXMix_9realistic|XXMix_9realistic(SDXL),,1024,1024,1:1,SDXL系基準解像度（1024²）
+xxmix9realistic,XXMix_9realistic (SDXL),XXMix_9realistic (SDXL)|XXMix_9realistic|XXMix_9realistic(SDXL),,1280,832,20:13,3:2（≈1MP）
+xxmix9realistic,XXMix_9realistic (SDXL),XXMix_9realistic (SDXL)|XXMix_9realistic|XXMix_9realistic(SDXL),,832,1280,13:20,2:3（≈1MP）
+xxmix9realistic,XXMix_9realistic (SDXL),XXMix_9realistic (SDXL)|XXMix_9realistic|XXMix_9realistic(SDXL),,1152,896,9:7,4:3（≈1MP）
+xxmix9realistic,XXMix_9realistic (SDXL),XXMix_9realistic (SDXL)|XXMix_9realistic|XXMix_9realistic(SDXL),,896,1152,7:9,3:4（≈1MP）
+xxmix9realistic,XXMix_9realistic (SDXL),XXMix_9realistic (SDXL)|XXMix_9realistic|XXMix_9realistic(SDXL),,1344,768,7:4,16:9（≈1MP）
+xxmix9realistic,XXMix_9realistic (SDXL),XXMix_9realistic (SDXL)|XXMix_9realistic|XXMix_9realistic(SDXL),,768,1344,4:7,9:16（≈1MP）
+yayoimix,yayoi_mix,yayoi_mix,,512,512,1:1,SD1.5系基準解像度（512²）
+yayoimix,yayoi_mix,yayoi_mix,,640,448,10:7,3:2（≈512²）
+yayoimix,yayoi_mix,yayoi_mix,,448,640,7:10,2:3（≈512²）
+yayoimix,yayoi_mix,yayoi_mix,,576,448,9:7,4:3（≈512²）
+yayoimix,yayoi_mix,yayoi_mix,,448,576,7:9,3:4（≈512²）
+yayoimix,yayoi_mix,yayoi_mix,,704,384,11:6,16:9（≈512²）
+yayoimix,yayoi_mix,yayoi_mix,,384,704,6:11,9:16（≈512²）
+kisaragimix,kisaragi mix,kisaragi mix|kisaragimix,,512,512,1:1,SD1.5系基準解像度（512²）
+kisaragimix,kisaragi mix,kisaragi mix|kisaragimix,,640,448,10:7,3:2（≈512²）
+kisaragimix,kisaragi mix,kisaragi mix|kisaragimix,,448,640,7:10,2:3（≈512²）
+kisaragimix,kisaragi mix,kisaragi mix|kisaragimix,,576,448,9:7,4:3（≈512²）
+kisaragimix,kisaragi mix,kisaragi mix|kisaragimix,,448,576,7:9,3:4（≈512²）
+kisaragimix,kisaragi mix,kisaragi mix|kisaragimix,,704,384,11:6,16:9（≈512²）
+kisaragimix,kisaragi mix,kisaragi mix|kisaragimix,,384,704,6:11,9:16（≈512²）
+mutsukimix,mutsuki mix,mutsuki mix|mutsukimix,,512,512,1:1,SD1.5系基準解像度（512²）
+mutsukimix,mutsuki mix,mutsuki mix|mutsukimix,,640,448,10:7,3:2（≈512²）
+mutsukimix,mutsuki mix,mutsuki mix|mutsukimix,,448,640,7:10,2:3（≈512²）
+mutsukimix,mutsuki mix,mutsuki mix|mutsukimix,,576,448,9:7,4:3（≈512²）
+mutsukimix,mutsuki mix,mutsuki mix|mutsukimix,,448,576,7:9,3:4（≈512²）
+mutsukimix,mutsuki mix,mutsuki mix|mutsukimix,,704,384,11:6,16:9（≈512²）
+mutsukimix,mutsuki mix,mutsuki mix|mutsukimix,,384,704,6:11,9:16（≈512²）
+kanpiromix,KanPiroMix,KanPiroMix,,512,512,1:1,SD1.5系基準解像度（512²）
+kanpiromix,KanPiroMix,KanPiroMix,,640,448,10:7,3:2（≈512²）
+kanpiromix,KanPiroMix,KanPiroMix,,448,640,7:10,2:3（≈512²）
+kanpiromix,KanPiroMix,KanPiroMix,,576,448,9:7,4:3（≈512²）
+kanpiromix,KanPiroMix,KanPiroMix,,448,576,7:9,3:4（≈512²）
+kanpiromix,KanPiroMix,KanPiroMix,,704,384,11:6,16:9（≈512²）
+kanpiromix,KanPiroMix,KanPiroMix,,384,704,6:11,9:16（≈512²）
+realx,Real-X,Real-X|Real_X,,512,512,1:1,SD1.5系基準解像度（512²）
+realx,Real-X,Real-X|Real_X,,640,448,10:7,3:2（≈512²）
+realx,Real-X,Real-X|Real_X,,448,640,7:10,2:3（≈512²）
+realx,Real-X,Real-X|Real_X,,576,448,9:7,4:3（≈512²）
+realx,Real-X,Real-X|Real_X,,448,576,7:9,3:4（≈512²）
+realx,Real-X,Real-X|Real_X,,704,384,11:6,16:9（≈512²）
+realx,Real-X,Real-X|Real_X,,384,704,6:11,9:16（≈512²）
+cyberrealistic,CyberRealistic,CyberRealistic,,512,512,1:1,SD1.5系基準解像度（512²）
+cyberrealistic,CyberRealistic,CyberRealistic,,640,448,10:7,3:2（≈512²）
+cyberrealistic,CyberRealistic,CyberRealistic,,448,640,7:10,2:3（≈512²）
+cyberrealistic,CyberRealistic,CyberRealistic,,576,448,9:7,4:3（≈512²）
+cyberrealistic,CyberRealistic,CyberRealistic,,448,576,7:9,3:4（≈512²）
+cyberrealistic,CyberRealistic,CyberRealistic,,704,384,11:6,16:9（≈512²）
+cyberrealistic,CyberRealistic,CyberRealistic,,384,704,6:11,9:16（≈512²）
+campurisari,CampuriSari,CampuriSari,,512,512,1:1,SD1.5系基準解像度（512²）
+campurisari,CampuriSari,CampuriSari,,640,448,10:7,3:2（≈512²）
+campurisari,CampuriSari,CampuriSari,,448,640,7:10,2:3（≈512²）
+campurisari,CampuriSari,CampuriSari,,576,448,9:7,4:3（≈512²）
+campurisari,CampuriSari,CampuriSari,,448,576,7:9,3:4（≈512²）
+campurisari,CampuriSari,CampuriSari,,704,384,11:6,16:9（≈512²）
+campurisari,CampuriSari,CampuriSari,,384,704,6:11,9:16（≈512²）
+dream2reality,Dream2Reality,Dream2Reality,,512,512,1:1,SD1.5系基準解像度（512²）
+dream2reality,Dream2Reality,Dream2Reality,,640,448,10:7,3:2（≈512²）
+dream2reality,Dream2Reality,Dream2Reality,,448,640,7:10,2:3（≈512²）
+dream2reality,Dream2Reality,Dream2Reality,,576,448,9:7,4:3（≈512²）
+dream2reality,Dream2Reality,Dream2Reality,,448,576,7:9,3:4（≈512²）
+dream2reality,Dream2Reality,Dream2Reality,,704,384,11:6,16:9（≈512²）
+dream2reality,Dream2Reality,Dream2Reality,,384,704,6:11,9:16（≈512²）
+beautypromix,BeautyProMix,BeautyProMix,,512,512,1:1,SD1.5系基準解像度（512²）
+beautypromix,BeautyProMix,BeautyProMix,,640,448,10:7,3:2（≈512²）
+beautypromix,BeautyProMix,BeautyProMix,,448,640,7:10,2:3（≈512²）
+beautypromix,BeautyProMix,BeautyProMix,,576,448,9:7,4:3（≈512²）
+beautypromix,BeautyProMix,BeautyProMix,,448,576,7:9,3:4（≈512²）
+beautypromix,BeautyProMix,BeautyProMix,,704,384,11:6,16:9（≈512²）
+beautypromix,BeautyProMix,BeautyProMix,,384,704,6:11,9:16（≈512²）
+cityedgemix,CityEdgeMix,CityEdgeMix,,512,512,1:1,SD1.5系基準解像度（512²）
+cityedgemix,CityEdgeMix,CityEdgeMix,,640,448,10:7,3:2（≈512²）
+cityedgemix,CityEdgeMix,CityEdgeMix,,448,640,7:10,2:3（≈512²）
+cityedgemix,CityEdgeMix,CityEdgeMix,,576,448,9:7,4:3（≈512²）
+cityedgemix,CityEdgeMix,CityEdgeMix,,448,576,7:9,3:4（≈512²）
+cityedgemix,CityEdgeMix,CityEdgeMix,,704,384,11:6,16:9（≈512²）
+cityedgemix,CityEdgeMix,CityEdgeMix,,384,704,6:11,9:16（≈512²）
+realdosmix,RealDosMix,RealDosMix,,512,512,1:1,SD1.5系基準解像度（512²）
+realdosmix,RealDosMix,RealDosMix,,640,448,10:7,3:2（≈512²）
+realdosmix,RealDosMix,RealDosMix,,448,640,7:10,2:3（≈512²）
+realdosmix,RealDosMix,RealDosMix,,576,448,9:7,4:3（≈512²）
+realdosmix,RealDosMix,RealDosMix,,448,576,7:9,3:4（≈512²）
+realdosmix,RealDosMix,RealDosMix,,704,384,11:6,16:9（≈512²）
+realdosmix,RealDosMix,RealDosMix,,384,704,6:11,9:16（≈512²）
+ddosmix,DDosMix,DDosMix,,512,512,1:1,SD1.5系基準解像度（512²）
+ddosmix,DDosMix,DDosMix,,640,448,10:7,3:2（≈512²）
+ddosmix,DDosMix,DDosMix,,448,640,7:10,2:3（≈512²）
+ddosmix,DDosMix,DDosMix,,576,448,9:7,4:3（≈512²）
+ddosmix,DDosMix,DDosMix,,448,576,7:9,3:4（≈512²）
+ddosmix,DDosMix,DDosMix,,704,384,11:6,16:9（≈512²）
+ddosmix,DDosMix,DDosMix,,384,704,6:11,9:16（≈512²）
+basilmix,basil mix,basil mix|basilmix,,512,512,1:1,SD1.5系基準解像度（512²）
+basilmix,basil mix,basil mix|basilmix,,640,448,10:7,3:2（≈512²）
+basilmix,basil mix,basil mix|basilmix,,448,640,7:10,2:3（≈512²）
+basilmix,basil mix,basil mix|basilmix,,576,448,9:7,4:3（≈512²）
+basilmix,basil mix,basil mix|basilmix,,448,576,7:9,3:4（≈512²）
+basilmix,basil mix,basil mix|basilmix,,704,384,11:6,16:9（≈512²）
+basilmix,basil mix,basil mix|basilmix,,384,704,6:11,9:16（≈512²）
+musev1,MUSE_v1,MUSE_v1,1,512,512,1:1,SD1.5系基準解像度（512²）
+musev1,MUSE_v1,MUSE_v1,1,640,448,10:7,3:2（≈512²）
+musev1,MUSE_v1,MUSE_v1,1,448,640,7:10,2:3（≈512²）
+musev1,MUSE_v1,MUSE_v1,1,576,448,9:7,4:3（≈512²）
+musev1,MUSE_v1,MUSE_v1,1,448,576,7:9,3:4（≈512²）
+musev1,MUSE_v1,MUSE_v1,1,704,384,11:6,16:9（≈512²）
+musev1,MUSE_v1,MUSE_v1,1,384,704,6:11,9:16（≈512²）
+lofiv2,LOFI_V2,LOFI_V2,2,512,512,1:1,SD1.5系基準解像度（512²）
+lofiv2,LOFI_V2,LOFI_V2,2,640,448,10:7,3:2（≈512²）
+lofiv2,LOFI_V2,LOFI_V2,2,448,640,7:10,2:3（≈512²）
+lofiv2,LOFI_V2,LOFI_V2,2,576,448,9:7,4:3（≈512²）
+lofiv2,LOFI_V2,LOFI_V2,2,448,576,7:9,3:4（≈512²）
+lofiv2,LOFI_V2,LOFI_V2,2,704,384,11:6,16:9（≈512²）
+lofiv2,LOFI_V2,LOFI_V2,2,384,704,6:11,9:16（≈512²）
+dongmixxrealistic,donGmiXX_Realistic,donGmiXX_Realistic,,512,512,1:1,SD1.5系基準解像度（512²）
+dongmixxrealistic,donGmiXX_Realistic,donGmiXX_Realistic,,640,448,10:7,3:2（≈512²）
+dongmixxrealistic,donGmiXX_Realistic,donGmiXX_Realistic,,448,640,7:10,2:3（≈512²）
+dongmixxrealistic,donGmiXX_Realistic,donGmiXX_Realistic,,576,448,9:7,4:3（≈512²）
+dongmixxrealistic,donGmiXX_Realistic,donGmiXX_Realistic,,448,576,7:9,3:4（≈512²）
+dongmixxrealistic,donGmiXX_Realistic,donGmiXX_Realistic,,704,384,11:6,16:9（≈512²）
+dongmixxrealistic,donGmiXX_Realistic,donGmiXX_Realistic,,384,704,6:11,9:16（≈512²）
+kawaiirealisticasianmix,Kawaii Realistic AsianMix,Kawaii Realistic AsianMix|KawaiiRealisticAsianMix,,512,512,1:1,SD1.5系基準解像度（512²）
+kawaiirealisticasianmix,Kawaii Realistic AsianMix,Kawaii Realistic AsianMix|KawaiiRealisticAsianMix,,640,448,10:7,3:2（≈512²）
+kawaiirealisticasianmix,Kawaii Realistic AsianMix,Kawaii Realistic AsianMix|KawaiiRealisticAsianMix,,448,640,7:10,2:3（≈512²）
+kawaiirealisticasianmix,Kawaii Realistic AsianMix,Kawaii Realistic AsianMix|KawaiiRealisticAsianMix,,576,448,9:7,4:3（≈512²）
+kawaiirealisticasianmix,Kawaii Realistic AsianMix,Kawaii Realistic AsianMix|KawaiiRealisticAsianMix,,448,576,7:9,3:4（≈512²）
+kawaiirealisticasianmix,Kawaii Realistic AsianMix,Kawaii Realistic AsianMix|KawaiiRealisticAsianMix,,704,384,11:6,16:9（≈512²）
+kawaiirealisticasianmix,Kawaii Realistic AsianMix,Kawaii Realistic AsianMix|KawaiiRealisticAsianMix,,384,704,6:11,9:16（≈512²）
+noblemixfix,Noble Mix Fix,Noble Mix Fix|NobleMixFix,,512,512,1:1,SD1.5系基準解像度（512²）
+noblemixfix,Noble Mix Fix,Noble Mix Fix|NobleMixFix,,640,448,10:7,3:2（≈512²）
+noblemixfix,Noble Mix Fix,Noble Mix Fix|NobleMixFix,,448,640,7:10,2:3（≈512²）
+noblemixfix,Noble Mix Fix,Noble Mix Fix|NobleMixFix,,576,448,9:7,4:3（≈512²）
+noblemixfix,Noble Mix Fix,Noble Mix Fix|NobleMixFix,,448,576,7:9,3:4（≈512²）
+noblemixfix,Noble Mix Fix,Noble Mix Fix|NobleMixFix,,704,384,11:6,16:9（≈512²）
+noblemixfix,Noble Mix Fix,Noble Mix Fix|NobleMixFix,,384,704,6:11,9:16（≈512²）
+realisian,Realisian,Realisian,,512,512,1:1,SD1.5系基準解像度（512²）
+realisian,Realisian,Realisian,,640,448,10:7,3:2（≈512²）
+realisian,Realisian,Realisian,,448,640,7:10,2:3（≈512²）
+realisian,Realisian,Realisian,,576,448,9:7,4:3（≈512²）
+realisian,Realisian,Realisian,,448,576,7:9,3:4（≈512²）
+realisian,Realisian,Realisian,,704,384,11:6,16:9（≈512²）
+realisian,Realisian,Realisian,,384,704,6:11,9:16（≈512²）
+realmaxv3.4,real-max-v3.4,real-max-v3.4|real_max_v3.4,3.4,512,512,1:1,SD1.5系基準解像度（512²）
+realmaxv3.4,real-max-v3.4,real-max-v3.4|real_max_v3.4,3.4,640,448,10:7,3:2（≈512²）
+realmaxv3.4,real-max-v3.4,real-max-v3.4|real_max_v3.4,3.4,448,640,7:10,2:3（≈512²）
+realmaxv3.4,real-max-v3.4,real-max-v3.4|real_max_v3.4,3.4,576,448,9:7,4:3（≈512²）
+realmaxv3.4,real-max-v3.4,real-max-v3.4|real_max_v3.4,3.4,448,576,7:9,3:4（≈512²）
+realmaxv3.4,real-max-v3.4,real-max-v3.4|real_max_v3.4,3.4,704,384,11:6,16:9（≈512²）
+realmaxv3.4,real-max-v3.4,real-max-v3.4|real_max_v3.4,3.4,384,704,6:11,9:16（≈512²）
+t3,t3,t3,,512,512,1:1,SD1.5系基準解像度（512²）
+t3,t3,t3,,640,448,10:7,3:2（≈512²）
+t3,t3,t3,,448,640,7:10,2:3（≈512²）
+t3,t3,t3,,576,448,9:7,4:3（≈512²）
+t3,t3,t3,,448,576,7:9,3:4（≈512²）
+t3,t3,t3,,704,384,11:6,16:9（≈512²）
+t3,t3,t3,,384,704,6:11,9:16（≈512²）
+7threaljp,7th_realJP,7th_realJP,,512,512,1:1,SD1.5系基準解像度（512²）
+7threaljp,7th_realJP,7th_realJP,,640,448,10:7,3:2（≈512²）
+7threaljp,7th_realJP,7th_realJP,,448,640,7:10,2:3（≈512²）
+7threaljp,7th_realJP,7th_realJP,,576,448,9:7,4:3（≈512²）
+7threaljp,7th_realJP,7th_realJP,,448,576,7:9,3:4（≈512²）
+7threaljp,7th_realJP,7th_realJP,,704,384,11:6,16:9（≈512²）
+7threaljp,7th_realJP,7th_realJP,,384,704,6:11,9:16（≈512²）
+realbeautymix,RealBeautyMix,RealBeautyMix,,512,512,1:1,SD1.5系基準解像度（512²）
+realbeautymix,RealBeautyMix,RealBeautyMix,,640,448,10:7,3:2（≈512²）
+realbeautymix,RealBeautyMix,RealBeautyMix,,448,640,7:10,2:3（≈512²）
+realbeautymix,RealBeautyMix,RealBeautyMix,,576,448,9:7,4:3（≈512²）
+realbeautymix,RealBeautyMix,RealBeautyMix,,448,576,7:9,3:4（≈512²）
+realbeautymix,RealBeautyMix,RealBeautyMix,,704,384,11:6,16:9（≈512²）
+realbeautymix,RealBeautyMix,RealBeautyMix,,384,704,6:11,9:16（≈512²）
+proportrait,ProPortrait,ProPortrait,,512,512,1:1,SD1.5系基準解像度（512²）
+proportrait,ProPortrait,ProPortrait,,640,448,10:7,3:2（≈512²）
+proportrait,ProPortrait,ProPortrait,,448,640,7:10,2:3（≈512²）
+proportrait,ProPortrait,ProPortrait,,576,448,9:7,4:3（≈512²）
+proportrait,ProPortrait,ProPortrait,,448,576,7:9,3:4（≈512²）
+proportrait,ProPortrait,ProPortrait,,704,384,11:6,16:9（≈512²）
+proportrait,ProPortrait,ProPortrait,,384,704,6:11,9:16（≈512²）
+magmix,MagMix,MagMix,,512,512,1:1,SD1.5系基準解像度（512²）
+magmix,MagMix,MagMix,,640,448,10:7,3:2（≈512²）
+magmix,MagMix,MagMix,,448,640,7:10,2:3（≈512²）
+magmix,MagMix,MagMix,,576,448,9:7,4:3（≈512²）
+magmix,MagMix,MagMix,,448,576,7:9,3:4（≈512²）
+magmix,MagMix,MagMix,,704,384,11:6,16:9（≈512²）
+magmix,MagMix,MagMix,,384,704,6:11,9:16（≈512²）
+sweetmuse,SweetMuse,SweetMuse,,512,512,1:1,SD1.5系基準解像度（512²）
+sweetmuse,SweetMuse,SweetMuse,,640,448,10:7,3:2（≈512²）
+sweetmuse,SweetMuse,SweetMuse,,448,640,7:10,2:3（≈512²）
+sweetmuse,SweetMuse,SweetMuse,,576,448,9:7,4:3（≈512²）
+sweetmuse,SweetMuse,SweetMuse,,448,576,7:9,3:4（≈512²）
+sweetmuse,SweetMuse,SweetMuse,,704,384,11:6,16:9（≈512²）
+sweetmuse,SweetMuse,SweetMuse,,384,704,6:11,9:16（≈512²）
+newmarsmix,NewMarsMix,NewMarsMix,,512,512,1:1,SD1.5系基準解像度（512²）
+newmarsmix,NewMarsMix,NewMarsMix,,640,448,10:7,3:2（≈512²）
+newmarsmix,NewMarsMix,NewMarsMix,,448,640,7:10,2:3（≈512²）
+newmarsmix,NewMarsMix,NewMarsMix,,576,448,9:7,4:3（≈512²）
+newmarsmix,NewMarsMix,NewMarsMix,,448,576,7:9,3:4（≈512²）
+newmarsmix,NewMarsMix,NewMarsMix,,704,384,11:6,16:9（≈512²）
+newmarsmix,NewMarsMix,NewMarsMix,,384,704,6:11,9:16（≈512²）
+snapdd00,snapdd00,snapdd00,,512,512,1:1,SD1.5系基準解像度（512²）
+snapdd00,snapdd00,snapdd00,,640,448,10:7,3:2（≈512²）
+snapdd00,snapdd00,snapdd00,,448,640,7:10,2:3（≈512²）
+snapdd00,snapdd00,snapdd00,,576,448,9:7,4:3（≈512²）
+snapdd00,snapdd00,snapdd00,,448,576,7:9,3:4（≈512²）
+snapdd00,snapdd00,snapdd00,,704,384,11:6,16:9（≈512²）
+snapdd00,snapdd00,snapdd00,,384,704,6:11,9:16（≈512²）
+shampoomix,Shampoo Mix,Shampoo Mix|ShampooMix,,512,512,1:1,SD1.5系基準解像度（512²）
+shampoomix,Shampoo Mix,Shampoo Mix|ShampooMix,,640,448,10:7,3:2（≈512²）
+shampoomix,Shampoo Mix,Shampoo Mix|ShampooMix,,448,640,7:10,2:3（≈512²）
+shampoomix,Shampoo Mix,Shampoo Mix|ShampooMix,,576,448,9:7,4:3（≈512²）
+shampoomix,Shampoo Mix,Shampoo Mix|ShampooMix,,448,576,7:9,3:4（≈512²）
+shampoomix,Shampoo Mix,Shampoo Mix|ShampooMix,,704,384,11:6,16:9（≈512²）
+shampoomix,Shampoo Mix,Shampoo Mix|ShampooMix,,384,704,6:11,9:16（≈512²）
+semirealmix,SemiRealMix,SemiRealMix,,512,512,1:1,SD1.5系基準解像度（512²）
+semirealmix,SemiRealMix,SemiRealMix,,640,448,10:7,3:2（≈512²）
+semirealmix,SemiRealMix,SemiRealMix,,448,640,7:10,2:3（≈512²）
+semirealmix,SemiRealMix,SemiRealMix,,576,448,9:7,4:3（≈512²）
+semirealmix,SemiRealMix,SemiRealMix,,448,576,7:9,3:4（≈512²）
+semirealmix,SemiRealMix,SemiRealMix,,704,384,11:6,16:9（≈512²）
+semirealmix,SemiRealMix,SemiRealMix,,384,704,6:11,9:16（≈512²）
+blueberrymix,Blueberry Mix,Blueberry Mix|BlueberryMix,,512,512,1:1,SD1.5系基準解像度（512²）
+blueberrymix,Blueberry Mix,Blueberry Mix|BlueberryMix,,640,448,10:7,3:2（≈512²）
+blueberrymix,Blueberry Mix,Blueberry Mix|BlueberryMix,,448,640,7:10,2:3（≈512²）
+blueberrymix,Blueberry Mix,Blueberry Mix|BlueberryMix,,576,448,9:7,4:3（≈512²）
+blueberrymix,Blueberry Mix,Blueberry Mix|BlueberryMix,,448,576,7:9,3:4（≈512²）
+blueberrymix,Blueberry Mix,Blueberry Mix|BlueberryMix,,704,384,11:6,16:9（≈512²）
+blueberrymix,Blueberry Mix,Blueberry Mix|BlueberryMix,,384,704,6:11,9:16（≈512²）
+henmixreal,henmix real,henmix real|henmixreal,,512,512,1:1,SD1.5系基準解像度（512²）
+henmixreal,henmix real,henmix real|henmixreal,,640,448,10:7,3:2（≈512²）
+henmixreal,henmix real,henmix real|henmixreal,,448,640,7:10,2:3（≈512²）
+henmixreal,henmix real,henmix real|henmixreal,,576,448,9:7,4:3（≈512²）
+henmixreal,henmix real,henmix real|henmixreal,,448,576,7:9,3:4（≈512²）
+henmixreal,henmix real,henmix real|henmixreal,,704,384,11:6,16:9（≈512²）
+henmixreal,henmix real,henmix real|henmixreal,,384,704,6:11,9:16（≈512²）
+fantasticmixreal,fantasticmix real,fantasticmix real|fantasticmixreal,,512,512,1:1,SD1.5系基準解像度（512²）
+fantasticmixreal,fantasticmix real,fantasticmix real|fantasticmixreal,,640,448,10:7,3:2（≈512²）
+fantasticmixreal,fantasticmix real,fantasticmix real|fantasticmixreal,,448,640,7:10,2:3（≈512²）
+fantasticmixreal,fantasticmix real,fantasticmix real|fantasticmixreal,,576,448,9:7,4:3（≈512²）
+fantasticmixreal,fantasticmix real,fantasticmix real|fantasticmixreal,,448,576,7:9,3:4（≈512²）
+fantasticmixreal,fantasticmix real,fantasticmix real|fantasticmixreal,,704,384,11:6,16:9（≈512²）
+fantasticmixreal,fantasticmix real,fantasticmix real|fantasticmixreal,,384,704,6:11,9:16（≈512²）
+girlmix,Girl Mix,Girl Mix|GirlMix,,512,512,1:1,SD1.5系基準解像度（512²）
+girlmix,Girl Mix,Girl Mix|GirlMix,,640,448,10:7,3:2（≈512²）
+girlmix,Girl Mix,Girl Mix|GirlMix,,448,640,7:10,2:3（≈512²）
+girlmix,Girl Mix,Girl Mix|GirlMix,,576,448,9:7,4:3（≈512²）
+girlmix,Girl Mix,Girl Mix|GirlMix,,448,576,7:9,3:4（≈512²）
+girlmix,Girl Mix,Girl Mix|GirlMix,,704,384,11:6,16:9（≈512²）
+girlmix,Girl Mix,Girl Mix|GirlMix,,384,704,6:11,9:16（≈512²）
+kencanmix,KenCanMix,KenCanMix,,512,512,1:1,SD1.5系基準解像度（512²）
+kencanmix,KenCanMix,KenCanMix,,640,448,10:7,3:2（≈512²）
+kencanmix,KenCanMix,KenCanMix,,448,640,7:10,2:3（≈512²）
+kencanmix,KenCanMix,KenCanMix,,576,448,9:7,4:3（≈512²）
+kencanmix,KenCanMix,KenCanMix,,448,576,7:9,3:4（≈512²）
+kencanmix,KenCanMix,KenCanMix,,704,384,11:6,16:9（≈512²）
+kencanmix,KenCanMix,KenCanMix,,384,704,6:11,9:16（≈512²）
+puremix,puremix,puremix,,512,512,1:1,SD1.5系基準解像度（512²）
+puremix,puremix,puremix,,640,448,10:7,3:2（≈512²）
+puremix,puremix,puremix,,448,640,7:10,2:3（≈512²）
+puremix,puremix,puremix,,576,448,9:7,4:3（≈512²）
+puremix,puremix,puremix,,448,576,7:9,3:4（≈512²）
+puremix,puremix,puremix,,704,384,11:6,16:9（≈512²）
+puremix,puremix,puremix,,384,704,6:11,9:16（≈512²）
+realidefmix,realidefmix,realidefmix,,512,512,1:1,SD1.5系基準解像度（512²）
+realidefmix,realidefmix,realidefmix,,640,448,10:7,3:2（≈512²）
+realidefmix,realidefmix,realidefmix,,448,640,7:10,2:3（≈512²）
+realidefmix,realidefmix,realidefmix,,576,448,9:7,4:3（≈512²）
+realidefmix,realidefmix,realidefmix,,448,576,7:9,3:4（≈512²）
+realidefmix,realidefmix,realidefmix,,704,384,11:6,16:9（≈512²）
+realidefmix,realidefmix,realidefmix,,384,704,6:11,9:16（≈512²）
+milktea,milktea,milktea,,512,512,1:1,（LoRAとして流通が主だがベース系はSD1.5）512²基準
+milktea,milktea,milktea,,640,448,10:7,3:2（≈512²）
+milktea,milktea,milktea,,448,640,7:10,2:3（≈512²）
+milktea,milktea,milktea,,576,448,9:7,4:3（≈512²）
+milktea,milktea,milktea,,448,576,7:9,3:4（≈512²）
+milktea,milktea,milktea,,704,384,11:6,16:9（≈512²）
+milktea,milktea,milktea,,384,704,6:11,9:16（≈512²）
+animepasteldream,Anime Pastel Dream,Anime Pastel Dream|AnimePastelDream,,512,512,1:1,一次情報：HFモデルカードにBase Model: SD1.5
+animepasteldream,Anime Pastel Dream,Anime Pastel Dream|AnimePastelDream,,640,448,10:7,3:2（≈512²）
+animepasteldream,Anime Pastel Dream,Anime Pastel Dream|AnimePastelDream,,448,640,7:10,2:3（≈512²）
+animepasteldream,Anime Pastel Dream,Anime Pastel Dream|AnimePastelDream,,576,448,9:7,4:3（≈512²）
+animepasteldream,Anime Pastel Dream,Anime Pastel Dream|AnimePastelDream,,448,576,7:9,3:4（≈512²）
+animepasteldream,Anime Pastel Dream,Anime Pastel Dream|AnimePastelDream,,704,384,11:6,16:9（≈512²）
+animepasteldream,Anime Pastel Dream,Anime Pastel Dream|AnimePastelDream,,384,704,6:11,9:16（≈512²）
+flatpiececore,FlatpieceCore,FlatpieceCore,,512,512,1:1,一次情報の配布表記はSD系アニメ合成（=SD1.5系運用が一般）。512²基準
+flatpiececore,FlatpieceCore,FlatpieceCore,,640,448,10:7,3:2（≈512²）
+flatpiececore,FlatpieceCore,FlatpieceCore,,448,640,7:10,2:3（≈512²）
+flatpiececore,FlatpieceCore,FlatpieceCore,,576,448,9:7,4:3（≈512²）
+flatpiececore,FlatpieceCore,FlatpieceCore,,448,576,7:9,3:4（≈512²）
+flatpiececore,FlatpieceCore,FlatpieceCore,,704,384,11:6,16:9（≈512²）
+flatpiececore,FlatpieceCore,FlatpieceCore,,384,704,6:11,9:16（≈512²）
+meice222,Meice222,Meice222,,512,512,1:1,記事実例が512×768（=2:3）で記載→SD1.5帯で安定。512²基準
+meice222,Meice222,Meice222,,640,448,10:7,3:2（≈512²）
+meice222,Meice222,Meice222,,448,640,7:10,2:3（記事実例と整合）
+meice222,Meice222,Meice222,,576,448,9:7,4:3（≈512²）
+meice222,Meice222,Meice222,,448,576,7:9,3:4（≈512²）
+meice222,Meice222,Meice222,,704,384,11:6,16:9（≈512²）
+meice222,Meice222,Meice222,,384,704,6:11,9:16（≈512²）
+colorboxzycc,color box-Zycc,color box-Zycc|colorbox-Zycc|color box_Zycc,,512,512,1:1,配布情報はSD1.5系チェックポイントとして流通。512²基準
+colorboxzycc,color box-Zycc,color box-Zycc|colorbox-Zycc|color box_Zycc,,640,448,10:7,3:2（≈512²）
+colorboxzycc,color box-Zycc,color box-Zycc|colorbox-Zycc|color box_Zycc,,448,640,7:10,2:3（≈512²）
+colorboxzycc,color box-Zycc,color box-Zycc|colorbox-Zycc|color box_Zycc,,576,448,9:7,4:3（≈512²）
+colorboxzycc,color box-Zycc,color box-Zycc|colorbox-Zycc|color box_Zycc,,448,576,7:9,3:4（≈512²）
+colorboxzycc,color box-Zycc,color box-Zycc|colorbox-Zycc|color box_Zycc,,704,384,11:6,16:9（≈512²）
+colorboxzycc,color box-Zycc,color box-Zycc|colorbox-Zycc|color box_Zycc,,384,704,6:11,9:16（≈512²）
+etherblumix,Ether Blu Mix,Ether Blu Mix|EtherBluMix,,512,512,1:1,（公開情報はSD1.5アニメ合成の範疇）512²基準
+etherblumix,Ether Blu Mix,Ether Blu Mix|EtherBluMix,,640,448,10:7,3:2（≈512²）
+etherblumix,Ether Blu Mix,Ether Blu Mix|EtherBluMix,,448,640,7:10,2:3（≈512²）
+etherblumix,Ether Blu Mix,Ether Blu Mix|EtherBluMix,,576,448,9:7,4:3（≈512²）
+etherblumix,Ether Blu Mix,Ether Blu Mix|EtherBluMix,,448,576,7:9,3:4（≈512²）
+etherblumix,Ether Blu Mix,Ether Blu Mix|EtherBluMix,,704,384,11:6,16:9（≈512²）
+etherblumix,Ether Blu Mix,Ether Blu Mix|EtherBluMix,,384,704,6:11,9:16（≈512²）
+disillusionmix幻灭,DisillusionMix 幻灭,DisillusionMix 幻灭|DisillusionMix幻灭,,512,512,1:1,（公開情報：SD1.5アニメ系合成）512²基準
+disillusionmix幻灭,DisillusionMix 幻灭,DisillusionMix 幻灭|DisillusionMix幻灭,,640,448,10:7,3:2（≈512²）
+disillusionmix幻灭,DisillusionMix 幻灭,DisillusionMix 幻灭|DisillusionMix幻灭,,448,640,7:10,2:3（≈512²）
+disillusionmix幻灭,DisillusionMix 幻灭,DisillusionMix 幻灭|DisillusionMix幻灭,,576,448,9:7,4:3（≈512²）
+disillusionmix幻灭,DisillusionMix 幻灭,DisillusionMix 幻灭|DisillusionMix幻灭,,448,576,7:9,3:4（≈512²）
+disillusionmix幻灭,DisillusionMix 幻灭,DisillusionMix 幻灭|DisillusionMix幻灭,,704,384,11:6,16:9（≈512²）
+disillusionmix幻灭,DisillusionMix 幻灭,DisillusionMix 幻灭|DisillusionMix幻灭,,384,704,6:11,9:16（≈512²）
+qteamix通用q版模型,QteaMix 通用Q版模型,QteaMix 通用Q版模型|QteaMix通用Q版模型,,512,512,1:1,（デフォはSD1.5系チビキャラ向け）512²基準
+qteamix通用q版模型,QteaMix 通用Q版模型,QteaMix 通用Q版模型|QteaMix通用Q版模型,,640,448,10:7,3:2（≈512²）
+qteamix通用q版模型,QteaMix 通用Q版模型,QteaMix 通用Q版模型|QteaMix通用Q版模型,,448,640,7:10,2:3（≈512²）
+qteamix通用q版模型,QteaMix 通用Q版模型,QteaMix 通用Q版模型|QteaMix通用Q版模型,,576,448,9:7,4:3（≈512²）
+qteamix通用q版模型,QteaMix 通用Q版模型,QteaMix 通用Q版模型|QteaMix通用Q版模型,,448,576,7:9,3:4（≈512²）
+qteamix通用q版模型,QteaMix 通用Q版模型,QteaMix 通用Q版模型|QteaMix通用Q版模型,,704,384,11:6,16:9（≈512²）
+qteamix通用q版模型,QteaMix 通用Q版模型,QteaMix 通用Q版模型|QteaMix通用Q版模型,,384,704,6:11,9:16（≈512²）
+agelesnate,Agelesnate,Agelesnate,,512,512,1:1,配布先はStable Diffusion（SD1.5系）チェックポイントとして案内。512²基準
+agelesnate,Agelesnate,Agelesnate,,640,448,10:7,3:2（≈512²）
+agelesnate,Agelesnate,Agelesnate,,448,640,7:10,2:3（≈512²）
+agelesnate,Agelesnate,Agelesnate,,576,448,9:7,4:3（≈512²）
+agelesnate,Agelesnate,Agelesnate,,448,576,7:9,3:4（≈512²）
+agelesnate,Agelesnate,Agelesnate,,704,384,11:6,16:9（≈512²）
+agelesnate,Agelesnate,Agelesnate,,384,704,6:11,9:16（≈512²）
+async'smix,Async's MIX,Async's MIX|Async'sMIX,,512,512,1:1,"SD1.5ベース明記（""works better with smaller image sizes""）→512帯"
+async'smix,Async's MIX,Async's MIX|Async'sMIX,,640,448,10:7,3:2（≈512²）
+async'smix,Async's MIX,Async's MIX|Async'sMIX,,448,640,7:10,2:3（≈512²）
+async'smix,Async's MIX,Async's MIX|Async'sMIX,,576,448,9:7,4:3（≈512²）
+async'smix,Async's MIX,Async's MIX|Async'sMIX,,448,576,7:9,3:4（≈512²）
+async'smix,Async's MIX,Async's MIX|Async'sMIX,,704,384,11:6,16:9（≈512²）
+async'smix,Async's MIX,Async's MIX|Async'sMIX,,384,704,6:11,9:16（≈512²）
+bluepencil,blue_pencil（SD1.5）,blue_pencil（SD1.5）|blue_pencil,1.5,512,512,1:1,オリジナルはSD系チェックポイント。512²基準（SD1.5運用）
+bluepencil,blue_pencil（SD1.5）,blue_pencil（SD1.5）|blue_pencil,1.5,640,448,10:7,3:2（≈512²）
+bluepencil,blue_pencil（SD1.5）,blue_pencil（SD1.5）|blue_pencil,1.5,448,640,7:10,2:3（≈512²）
+bluepencil,blue_pencil（SD1.5）,blue_pencil（SD1.5）|blue_pencil,1.5,576,448,9:7,4:3（≈512²）
+bluepencil,blue_pencil（SD1.5）,blue_pencil（SD1.5）|blue_pencil,1.5,448,576,7:9,3:4（≈512²）
+bluepencil,blue_pencil（SD1.5）,blue_pencil（SD1.5）|blue_pencil,1.5,704,384,11:6,16:9（≈512²）
+bluepencil,blue_pencil（SD1.5）,blue_pencil（SD1.5）|blue_pencil,1.5,384,704,6:11,9:16（≈512²）
+bluepencilxl,blue_pencil-XL（SDXL）,blue_pencil-XL（SDXL）|blue_pencil-XL|blue_pencil_XL（SDXL）,,1024,1024,1:1,SDXL 1.0ベースを明記。1MP帯
+bluepencilxl,blue_pencil-XL（SDXL）,blue_pencil-XL（SDXL）|blue_pencil-XL|blue_pencil_XL（SDXL）,,1280,832,20:13,3:2（≈1MP）
+bluepencilxl,blue_pencil-XL（SDXL）,blue_pencil-XL（SDXL）|blue_pencil-XL|blue_pencil_XL（SDXL）,,832,1280,13:20,2:3（≈1MP）
+bluepencilxl,blue_pencil-XL（SDXL）,blue_pencil-XL（SDXL）|blue_pencil-XL|blue_pencil_XL（SDXL）,,1152,896,9:7,4:3（≈1MP）
+bluepencilxl,blue_pencil-XL（SDXL）,blue_pencil-XL（SDXL）|blue_pencil-XL|blue_pencil_XL（SDXL）,,896,1152,7:9,3:4（≈1MP）
+bluepencilxl,blue_pencil-XL（SDXL）,blue_pencil-XL（SDXL）|blue_pencil-XL|blue_pencil_XL（SDXL）,,1344,768,7:4,16:9（≈1MP）
+bluepencilxl,blue_pencil-XL（SDXL）,blue_pencil-XL（SDXL）|blue_pencil-XL|blue_pencil_XL（SDXL）,,768,1344,4:7,9:16（≈1MP）
+cyanohydrinmix,CyanohydrinMix,CyanohydrinMix,,512,512,1:1,記事実例に512×832（=2:3相当）掲載→SD1.5帯。512²基準
+cyanohydrinmix,CyanohydrinMix,CyanohydrinMix,,640,448,10:7,3:2（≈512²）
+cyanohydrinmix,CyanohydrinMix,CyanohydrinMix,,448,640,7:10,2:3（実例と整合）
+cyanohydrinmix,CyanohydrinMix,CyanohydrinMix,,576,448,9:7,4:3（≈512²）
+cyanohydrinmix,CyanohydrinMix,CyanohydrinMix,,448,576,7:9,3:4（≈512²）
+cyanohydrinmix,CyanohydrinMix,CyanohydrinMix,,704,384,11:6,16:9（≈512²）
+cyanohydrinmix,CyanohydrinMix,CyanohydrinMix,,384,704,6:11,9:16（≈512²）
+eleetmodel,Eleet Model,Eleet Model|EleetModel,,512,512,1:1,Hugging Faceのモデルカード（SD合成チェックポイント）→SD1.5運用が一般。512²基準
+eleetmodel,Eleet Model,Eleet Model|EleetModel,,640,448,10:7,3:2（≈512²）
+eleetmodel,Eleet Model,Eleet Model|EleetModel,,448,640,7:10,2:3（≈512²）
+eleetmodel,Eleet Model,Eleet Model|EleetModel,,576,448,9:7,4:3（≈512²）
+eleetmodel,Eleet Model,Eleet Model|EleetModel,,448,576,7:9,3:4（≈512²）
+eleetmodel,Eleet Model,Eleet Model|EleetModel,,704,384,11:6,16:9（≈512²）
+eleetmodel,Eleet Model,Eleet Model|EleetModel,,384,704,6:11,9:16（≈512²）
+hijklmixanime,HIJKLMix Anime,HIJKLMix Anime|HIJKLMixAnime,,512,512,1:1,Base Model: SD1.5と明記。512²基準
+hijklmixanime,HIJKLMix Anime,HIJKLMix Anime|HIJKLMixAnime,,640,448,10:7,3:2（≈512²）
+hijklmixanime,HIJKLMix Anime,HIJKLMix Anime|HIJKLMixAnime,,448,640,7:10,2:3（≈512²）
+hijklmixanime,HIJKLMix Anime,HIJKLMix Anime|HIJKLMixAnime,,576,448,9:7,4:3（≈512²）
+hijklmixanime,HIJKLMix Anime,HIJKLMix Anime|HIJKLMixAnime,,448,576,7:9,3:4（≈512²）
+hijklmixanime,HIJKLMix Anime,HIJKLMix Anime|HIJKLMixAnime,,704,384,11:6,16:9（≈512²）
+hijklmixanime,HIJKLMix Anime,HIJKLMix Anime|HIJKLMixAnime,,384,704,6:11,9:16（≈512²）
+jitq,JitQ,JitQ,,512,512,1:1,派生元がPony系と示唆されるが運用はSD1.5帯（Pony SD1.5世代が原流）。512²基準
+jitq,JitQ,JitQ,,640,448,10:7,3:2（≈512²）
+jitq,JitQ,JitQ,,448,640,7:10,2:3（≈512²）
+jitq,JitQ,JitQ,,576,448,9:7,4:3（≈512²）
+jitq,JitQ,JitQ,,448,576,7:9,3:4（≈512²）
+jitq,JitQ,JitQ,,704,384,11:6,16:9（≈512²）
+jitq,JitQ,JitQ,,384,704,6:11,9:16（≈512²）
+masteranime,MasterAnime,MasterAnime,,512,512,1:1,配布（再掲）によりSD系アニメ合成として流通→512²基準
+masteranime,MasterAnime,MasterAnime,,640,448,10:7,3:2（≈512²）
+masteranime,MasterAnime,MasterAnime,,448,640,7:10,2:3（≈512²）
+masteranime,MasterAnime,MasterAnime,,576,448,9:7,4:3（≈512²）
+masteranime,MasterAnime,MasterAnime,,448,576,7:9,3:4（≈512²）
+masteranime,MasterAnime,MasterAnime,,704,384,11:6,16:9（≈512²）
+masteranime,MasterAnime,MasterAnime,,384,704,6:11,9:16（≈512²）
+momijimix,MomijiMix,MomijiMix,,512,512,1:1,配布系の実態よりSD系合成（作者HFにもMomijiMix-XL別系あり）。512²基準
+momijimix,MomijiMix,MomijiMix,,640,448,10:7,3:2（≈512²）
+momijimix,MomijiMix,MomijiMix,,448,640,7:10,2:3（≈512²）
+momijimix,MomijiMix,MomijiMix,,576,448,9:7,4:3（≈512²）
+momijimix,MomijiMix,MomijiMix,,448,576,7:9,3:4（≈512²）
+momijimix,MomijiMix,MomijiMix,,704,384,11:6,16:9（≈512²）
+momijimix,MomijiMix,MomijiMix,,384,704,6:11,9:16（≈512²）
+raesanmix,RaesanMix,RaesanMix,,512,512,1:1,SD系マージ（3D寄り）として案内→512²基準
+raesanmix,RaesanMix,RaesanMix,,640,448,10:7,3:2（≈512²）
+raesanmix,RaesanMix,RaesanMix,,448,640,7:10,2:3（≈512²）
+raesanmix,RaesanMix,RaesanMix,,576,448,9:7,4:3（≈512²）
+raesanmix,RaesanMix,RaesanMix,,448,576,7:9,3:4（≈512²）
+raesanmix,RaesanMix,RaesanMix,,704,384,11:6,16:9（≈512²）
+raesanmix,RaesanMix,RaesanMix,,384,704,6:11,9:16（≈512²）
+reallynotreal,ReallyNotReal,ReallyNotReal,,512,512,1:1,再配布カード：SD系チェックポイント→512²基準
+reallynotreal,ReallyNotReal,ReallyNotReal,,640,448,10:7,3:2（≈512²）
+reallynotreal,ReallyNotReal,ReallyNotReal,,448,640,7:10,2:3（≈512²）
+reallynotreal,ReallyNotReal,ReallyNotReal,,576,448,9:7,4:3（≈512²）
+reallynotreal,ReallyNotReal,ReallyNotReal,,448,576,7:9,3:4（≈512²）
+reallynotreal,ReallyNotReal,ReallyNotReal,,704,384,11:6,16:9（≈512²）
+reallynotreal,ReallyNotReal,ReallyNotReal,,384,704,6:11,9:16（≈512²）
+ultraillusion2d,ULTRA-ILLUSION 2D,ULTRA-ILLUSION 2D|ULTRA-ILLUSION2D|ULTRA_ILLUSION 2D,,512,512,1:1,（一般にSD1.5アニメ系として流通）512²基準
+ultraillusion2d,ULTRA-ILLUSION 2D,ULTRA-ILLUSION 2D|ULTRA-ILLUSION2D|ULTRA_ILLUSION 2D,,640,448,10:7,3:2（≈512²）
+ultraillusion2d,ULTRA-ILLUSION 2D,ULTRA-ILLUSION 2D|ULTRA-ILLUSION2D|ULTRA_ILLUSION 2D,,448,640,7:10,2:3（≈512²）
+ultraillusion2d,ULTRA-ILLUSION 2D,ULTRA-ILLUSION 2D|ULTRA-ILLUSION2D|ULTRA_ILLUSION 2D,,576,448,9:7,4:3（≈512²）
+ultraillusion2d,ULTRA-ILLUSION 2D,ULTRA-ILLUSION 2D|ULTRA-ILLUSION2D|ULTRA_ILLUSION 2D,,448,576,7:9,3:4（≈512²）
+ultraillusion2d,ULTRA-ILLUSION 2D,ULTRA-ILLUSION 2D|ULTRA-ILLUSION2D|ULTRA_ILLUSION 2D,,704,384,11:6,16:9（≈512²）
+ultraillusion2d,ULTRA-ILLUSION 2D,ULTRA-ILLUSION 2D|ULTRA-ILLUSION2D|ULTRA_ILLUSION 2D,,384,704,6:11,9:16（≈512²）
+yuzu,Yuzu,Yuzu,,512,512,1:1,（Civitai投稿例のみ確認・Meina等SD1.5系で生成）512²基準
+yuzu,Yuzu,Yuzu,,640,448,10:7,3:2（≈512²）
+yuzu,Yuzu,Yuzu,,448,640,7:10,2:3（≈512²）
+yuzu,Yuzu,Yuzu,,576,448,9:7,4:3（≈512²）
+yuzu,Yuzu,Yuzu,,448,576,7:9,3:4（≈512²）
+yuzu,Yuzu,Yuzu,,704,384,11:6,16:9（≈512²）
+yuzu,Yuzu,Yuzu,,384,704,6:11,9:16（≈512²）
+zero,Zero,Zero,,512,512,1:1,（一般にSD1.5アニメ系として流通）512²基準
+zero,Zero,Zero,,640,448,10:7,3:2（≈512²）
+zero,Zero,Zero,,448,640,7:10,2:3（≈512²）
+zero,Zero,Zero,,576,448,9:7,4:3（≈512²）
+zero,Zero,Zero,,448,576,7:9,3:4（≈512²）
+zero,Zero,Zero,,704,384,11:6,16:9（≈512²）
+zero,Zero,Zero,,384,704,6:11,9:16（≈512²）
+femix_hassakuxl,FeMix_HassakuXL,femix hassakuxl|femix_hassakuxl|femix_hassakuxl|hassakuxl illustrious,2.14,1024,1024,1:1,ネイティブ1024²（正方形）
+femix_hassakuxl,FeMix_HassakuXL,femix hassakuxl|femix_hassakuxl|femix_hassakuxl|hassakuxl illustrious,2.14,1280,896,3:2,横長3:2（≈1024²; 64の倍数）
+femix_hassakuxl,FeMix_HassakuXL,femix hassakuxl|femix_hassakuxl|femix_hassakuxl|hassakuxl illustrious,2.14,896,1280,2:3,縦長2:3（≈1024²; 64の倍数）
+femix_hassakuxl,FeMix_HassakuXL,femix hassakuxl|femix_hassakuxl|femix_hassakuxl|hassakuxl illustrious,2.14,1152,896,4:3,横長4:3（≈1024²; 64の倍数）
+femix_hassakuxl,FeMix_HassakuXL,femix hassakuxl|femix_hassakuxl|femix_hassakuxl|hassakuxl illustrious,2.14,896,1152,3:4,縦長3:4（≈1024²; 64の倍数）
+femix_hassakuxl,FeMix_HassakuXL,femix hassakuxl|femix_hassakuxl|femix_hassakuxl|hassakuxl illustrious,2.14,1408,768,16:9,横長16:9（≈1024²; 64の倍数）
+femix_hassakuxl,FeMix_HassakuXL,femix hassakuxl|femix_hassakuxl|femix_hassakuxl|hassakuxl illustrious,2.14,768,1408,9:16,縦長9:16（≈1024²; 64の倍数）
+anythingxl,AnythingXL,anything xl|anythingxl|anything xl sdxl,5.0,1024,1024,1:1,ネイティブ1024²（正方形）
+anythingxl,AnythingXL,anything xl|anythingxl|anything xl sdxl,5.0,1280,896,3:2,横長3:2（≈1024²; 64の倍数）
+anythingxl,AnythingXL,anything xl|anythingxl|anything xl sdxl,5.0,896,1280,2:3,縦長2:3（≈1024²; 64の倍数）
+anythingxl,AnythingXL,anything xl|anythingxl|anything xl sdxl,5.0,1152,896,4:3,横長4:3（≈1024²; 64の倍数）
+anythingxl,AnythingXL,anything xl|anythingxl|anything xl sdxl,5.0,896,1152,3:4,縦長3:4（≈1024²; 64の倍数）
+anythingxl,AnythingXL,anything xl|anythingxl|anything xl sdxl,5.0,1408,768,16:9,横長16:9（≈1024²; 64の倍数）
+anythingxl,AnythingXL,anything xl|anythingxl|anything xl sdxl,5.0,768,1408,9:16,縦長9:16（≈1024²; 64の倍数）
+perfectdeliberate_xl,PerfectDeliberate,perfect deliberate|perfectdeliberate xl|perfectdeliberate,1.0,1024,1024,1:1,ネイティブ1024²（正方形）
+perfectdeliberate_xl,PerfectDeliberate,perfect deliberate|perfectdeliberate xl|perfectdeliberate,1.0,1280,896,3:2,横長3:2（≈1024²; 64の倍数）
+perfectdeliberate_xl,PerfectDeliberate,perfect deliberate|perfectdeliberate xl|perfectdeliberate,1.0,896,1280,2:3,縦長2:3（≈1024²; 64の倍数）
+perfectdeliberate_xl,PerfectDeliberate,perfect deliberate|perfectdeliberate xl|perfectdeliberate,1.0,1152,896,4:3,横長4:3（≈1024²; 64の倍数）
+perfectdeliberate_xl,PerfectDeliberate,perfect deliberate|perfectdeliberate xl|perfectdeliberate,1.0,896,1152,3:4,縦長3:4（≈1024²; 64の倍数）
+perfectdeliberate_xl,PerfectDeliberate,perfect deliberate|perfectdeliberate xl|perfectdeliberate,1.0,1408,768,16:9,横長16:9（≈1024²; 64の倍数）
+perfectdeliberate_xl,PerfectDeliberate,perfect deliberate|perfectdeliberate xl|perfectdeliberate,1.0,768,1408,9:16,縦長9:16（≈1024²; 64の倍数）
+anythingxl_wai_nsfw,AnythingXL+waiNSFWIllustrious,anythingxl|wai-nsfw-illustrious|anythingxl+wai nsfw,5.0+15.0,1024,1024,1:1,ネイティブ1024²（正方形）
+anythingxl_wai_nsfw,AnythingXL+waiNSFWIllustrious,anythingxl|wai-nsfw-illustrious|anythingxl+wai nsfw,5.0+15.0,1280,896,3:2,横長3:2（≈1024²; 64の倍数）
+anythingxl_wai_nsfw,AnythingXL+waiNSFWIllustrious,anythingxl|wai-nsfw-illustrious|anythingxl+wai nsfw,5.0+15.0,896,1280,2:3,縦長2:3（≈1024²; 64の倍数）
+anythingxl_wai_nsfw,AnythingXL+waiNSFWIllustrious,anythingxl|wai-nsfw-illustrious|anythingxl+wai nsfw,5.0+15.0,1152,896,4:3,横長4:3（≈1024²; 64の倍数）
+anythingxl_wai_nsfw,AnythingXL+waiNSFWIllustrious,anythingxl|wai-nsfw-illustrious|anythingxl+wai nsfw,5.0+15.0,896,1152,3:4,縦長3:4（≈1024²; 64の倍数）
+anythingxl_wai_nsfw,AnythingXL+waiNSFWIllustrious,anythingxl|wai-nsfw-illustrious|anythingxl+wai nsfw,5.0+15.0,1408,768,16:9,横長16:9（≈1024²; 64の倍数）
+anythingxl_wai_nsfw,AnythingXL+waiNSFWIllustrious,anythingxl|wai-nsfw-illustrious|anythingxl+wai nsfw,5.0+15.0,768,1408,9:16,縦長9:16（≈1024²; 64の倍数）
+nova_anime_xl,Nova Anime XL,nova anime xl|nova anime|nova anime illustrious,11.0,1024,1024,1:1,ネイティブ1024²（正方形）
+nova_anime_xl,Nova Anime XL,nova anime xl|nova anime|nova anime illustrious,11.0,1280,896,3:2,横長3:2（≈1024²; 64の倍数）
+nova_anime_xl,Nova Anime XL,nova anime xl|nova anime|nova anime illustrious,11.0,896,1280,2:3,縦長2:3（≈1024²; 64の倍数）
+nova_anime_xl,Nova Anime XL,nova anime xl|nova anime|nova anime illustrious,11.0,1152,896,4:3,横長4:3（≈1024²; 64の倍数）
+nova_anime_xl,Nova Anime XL,nova anime xl|nova anime|nova anime illustrious,11.0,896,1152,3:4,縦長3:4（≈1024²; 64の倍数）
+nova_anime_xl,Nova Anime XL,nova anime xl|nova anime|nova anime illustrious,11.0,1408,768,16:9,横長16:9（≈1024²; 64の倍数）
+nova_anime_xl,Nova Anime XL,nova anime xl|nova anime|nova anime illustrious,11.0,768,1408,9:16,縦長9:16（≈1024²; 64の倍数）
+nova_orange_xl,Nova Orange XL,nova orange xl|nova orange|nova orange illustrious,11.0,1024,1024,1:1,ネイティブ1024²（正方形）
+nova_orange_xl,Nova Orange XL,nova orange xl|nova orange|nova orange illustrious,11.0,1280,896,3:2,横長3:2（≈1024²; 64の倍数）
+nova_orange_xl,Nova Orange XL,nova orange xl|nova orange|nova orange illustrious,11.0,896,1280,2:3,縦長2:3（≈1024²; 64の倍数）
+nova_orange_xl,Nova Orange XL,nova orange xl|nova orange|nova orange illustrious,11.0,1152,896,4:3,横長4:3（≈1024²; 64の倍数）
+nova_orange_xl,Nova Orange XL,nova orange xl|nova orange|nova orange illustrious,11.0,896,1152,3:4,縦長3:4（≈1024²; 64の倍数）
+nova_orange_xl,Nova Orange XL,nova orange xl|nova orange|nova orange illustrious,11.0,1408,768,16:9,横長16:9（≈1024²; 64の倍数）
+nova_orange_xl,Nova Orange XL,nova orange xl|nova orange|nova orange illustrious,11.0,768,1408,9:16,縦長9:16（≈1024²; 64の倍数）
+nova_furry_xl,Nova Furry XL,nova furry xl|nova furry|nova furry illustrious,11.0,1024,1024,1:1,ネイティブ1024²（正方形）
+nova_furry_xl,Nova Furry XL,nova furry xl|nova furry|nova furry illustrious,11.0,1280,896,3:2,横長3:2（≈1024²; 64の倍数）
+nova_furry_xl,Nova Furry XL,nova furry xl|nova furry|nova furry illustrious,11.0,896,1280,2:3,縦長2:3（≈1024²; 64の倍数）
+nova_furry_xl,Nova Furry XL,nova furry xl|nova furry|nova furry illustrious,11.0,1152,896,4:3,横長4:3（≈1024²; 64の倍数）
+nova_furry_xl,Nova Furry XL,nova furry xl|nova furry|nova furry illustrious,11.0,896,1152,3:4,縦長3:4（≈1024²; 64の倍数）
+nova_furry_xl,Nova Furry XL,nova furry xl|nova furry|nova furry illustrious,11.0,1408,768,16:9,横長16:9（≈1024²; 64の倍数）
+nova_furry_xl,Nova Furry XL,nova furry xl|nova furry|nova furry illustrious,11.0,768,1408,9:16,縦長9:16（≈1024²; 64の倍数）
+nova_anime3d_xl,Nova Anime3D XL,nova anime3d xl|nova 3dcg xl|nova anime3d illustrious,3.0,1024,1024,1:1,ネイティブ1024²（正方形）
+nova_anime3d_xl,Nova Anime3D XL,nova anime3d xl|nova 3dcg xl|nova anime3d illustrious,3.0,1280,896,3:2,横長3:2（≈1024²; 64の倍数）
+nova_anime3d_xl,Nova Anime3D XL,nova anime3d xl|nova 3dcg xl|nova anime3d illustrious,3.0,896,1280,2:3,縦長2:3（≈1024²; 64の倍数）
+nova_anime3d_xl,Nova Anime3D XL,nova anime3d xl|nova 3dcg xl|nova anime3d illustrious,3.0,1152,896,4:3,横長4:3（≈1024²; 64の倍数）
+nova_anime3d_xl,Nova Anime3D XL,nova anime3d xl|nova 3dcg xl|nova anime3d illustrious,3.0,896,1152,3:4,縦長3:4（≈1024²; 64の倍数）
+nova_anime3d_xl,Nova Anime3D XL,nova anime3d xl|nova 3dcg xl|nova anime3d illustrious,3.0,1408,768,16:9,横長16:9（≈1024²; 64の倍数）
+nova_anime3d_xl,Nova Anime3D XL,nova anime3d xl|nova 3dcg xl|nova anime3d illustrious,3.0,768,1408,9:16,縦長9:16（≈1024²; 64の倍数）
+nova_reality_xl,Nova Realityt XL,nova reality xl|nova realityt xl|nova reality illustrious,5.0,1024,1024,1:1,ネイティブ1024²（正方形）
+nova_reality_xl,Nova Realityt XL,nova reality xl|nova realityt xl|nova reality illustrious,5.0,1280,896,3:2,横長3:2（≈1024²; 64の倍数）
+nova_reality_xl,Nova Realityt XL,nova reality xl|nova realityt xl|nova reality illustrious,5.0,896,1280,2:3,縦長2:3（≈1024²; 64の倍数）
+nova_reality_xl,Nova Realityt XL,nova reality xl|nova realityt xl|nova reality illustrious,5.0,1152,896,4:3,横長4:3（≈1024²; 64の倍数）
+nova_reality_xl,Nova Realityt XL,nova reality xl|nova realityt xl|nova reality illustrious,5.0,896,1152,3:4,縦長3:4（≈1024²; 64の倍数）
+nova_reality_xl,Nova Realityt XL,nova reality xl|nova realityt xl|nova reality illustrious,5.0,1408,768,16:9,横長16:9（≈1024²; 64の倍数）
+nova_reality_xl,Nova Realityt XL,nova reality xl|nova realityt xl|nova reality illustrious,5.0,768,1408,9:16,縦長9:16（≈1024²; 64の倍数）
+nova_cartoon_xl,Nova Cartoon XL,nova cartoon xl|nova cartoon|nova cartoon illustrious,3.0,1024,1024,1:1,ネイティブ1024²（正方形）
+nova_cartoon_xl,Nova Cartoon XL,nova cartoon xl|nova cartoon|nova cartoon illustrious,3.0,1280,896,3:2,横長3:2（≈1024²; 64の倍数）
+nova_cartoon_xl,Nova Cartoon XL,nova cartoon xl|nova cartoon|nova cartoon illustrious,3.0,896,1280,2:3,縦長2:3（≈1024²; 64の倍数）
+nova_cartoon_xl,Nova Cartoon XL,nova cartoon xl|nova cartoon|nova cartoon illustrious,3.0,1152,896,4:3,横長4:3（≈1024²; 64の倍数）
+nova_cartoon_xl,Nova Cartoon XL,nova cartoon xl|nova cartoon|nova cartoon illustrious,3.0,896,1152,3:4,縦長3:4（≈1024²; 64の倍数）
+nova_cartoon_xl,Nova Cartoon XL,nova cartoon xl|nova cartoon|nova cartoon illustrious,3.0,1408,768,16:9,横長16:9（≈1024²; 64の倍数）
+nova_cartoon_xl,Nova Cartoon XL,nova cartoon xl|nova cartoon|nova cartoon illustrious,3.0,768,1408,9:16,縦長9:16（≈1024²; 64の倍数）
+nova_mature_xl,Nova Mature XL,nova mature xl|nova mature|nova mature illustrious,10.0,1024,1024,1:1,ネイティブ1024²（正方形）
+nova_mature_xl,Nova Mature XL,nova mature xl|nova mature|nova mature illustrious,10.0,1280,896,3:2,横長3:2（≈1024²; 64の倍数）
+nova_mature_xl,Nova Mature XL,nova mature xl|nova mature|nova mature illustrious,10.0,896,1280,2:3,縦長2:3（≈1024²; 64の倍数）
+nova_mature_xl,Nova Mature XL,nova mature xl|nova mature|nova mature illustrious,10.0,1152,896,4:3,横長4:3（≈1024²; 64の倍数）
+nova_mature_xl,Nova Mature XL,nova mature xl|nova mature|nova mature illustrious,10.0,896,1152,3:4,縦長3:4（≈1024²; 64の倍数）
+nova_mature_xl,Nova Mature XL,nova mature xl|nova mature|nova mature illustrious,10.0,1408,768,16:9,横長16:9（≈1024²; 64の倍数）
+nova_mature_xl,Nova Mature XL,nova mature xl|nova mature|nova mature illustrious,10.0,768,1408,9:16,縦長9:16（≈1024²; 64の倍数）
+miaomiao_harem,MiaoMiao Harem,miaomiao harem|miao miao harem|illustrious run miaomiao,1.5a,1024,1024,1:1,ネイティブ1024²（正方形）
+miaomiao_harem,MiaoMiao Harem,miaomiao harem|miao miao harem|illustrious run miaomiao,1.5a,1280,896,3:2,横長3:2（≈1024²; 64の倍数）
+miaomiao_harem,MiaoMiao Harem,miaomiao harem|miao miao harem|illustrious run miaomiao,1.5a,896,1280,2:3,縦長2:3（≈1024²; 64の倍数）
+miaomiao_harem,MiaoMiao Harem,miaomiao harem|miao miao harem|illustrious run miaomiao,1.5a,1152,896,4:3,横長4:3（≈1024²; 64の倍数）
+miaomiao_harem,MiaoMiao Harem,miaomiao harem|miao miao harem|illustrious run miaomiao,1.5a,896,1152,3:4,縦長3:4（≈1024²; 64の倍数）
+miaomiao_harem,MiaoMiao Harem,miaomiao harem|miao miao harem|illustrious run miaomiao,1.5a,1408,768,16:9,横長16:9（≈1024²; 64の倍数）
+miaomiao_harem,MiaoMiao Harem,miaomiao harem|miao miao harem|illustrious run miaomiao,1.5a,768,1408,9:16,縦長9:16（≈1024²; 64の倍数）
+kodorail,KodoraIL,kodorail|kodoro il|kodora il sdxl,11.0,1024,1024,1:1,ネイティブ1024²（正方形）
+kodorail,KodoraIL,kodorail|kodoro il|kodora il sdxl,11.0,1280,896,3:2,横長3:2（≈1024²; 64の倍数）
+kodorail,KodoraIL,kodorail|kodoro il|kodora il sdxl,11.0,896,1280,2:3,縦長2:3（≈1024²; 64の倍数）
+kodorail,KodoraIL,kodorail|kodoro il|kodora il sdxl,11.0,1152,896,4:3,横長4:3（≈1024²; 64の倍数）
+kodorail,KodoraIL,kodorail|kodoro il|kodora il sdxl,11.0,896,1152,3:4,縦長3:4（≈1024²; 64の倍数）
+kodorail,KodoraIL,kodorail|kodoro il|kodora il sdxl,11.0,1408,768,16:9,横長16:9（≈1024²; 64の倍数）
+kodorail,KodoraIL,kodorail|kodoro il|kodora il sdxl,11.0,768,1408,9:16,縦長9:16（≈1024²; 64の倍数）
+cyberrealistic_pony,CyberRealistic Pony,cyberrealistic pony|cyber realistic pony|pony diffusion v6 branch,12.7,1024,1024,1:1,ネイティブ1024²（正方形）
+cyberrealistic_pony,CyberRealistic Pony,cyberrealistic pony|cyber realistic pony|pony diffusion v6 branch,12.7,1280,896,3:2,横長3:2（≈1024²; 64の倍数）
+cyberrealistic_pony,CyberRealistic Pony,cyberrealistic pony|cyber realistic pony|pony diffusion v6 branch,12.7,896,1280,2:3,縦長2:3（≈1024²; 64の倍数）
+cyberrealistic_pony,CyberRealistic Pony,cyberrealistic pony|cyber realistic pony|pony diffusion v6 branch,12.7,1152,896,4:3,横長4:3（≈1024²; 64の倍数）
+cyberrealistic_pony,CyberRealistic Pony,cyberrealistic pony|cyber realistic pony|pony diffusion v6 branch,12.7,896,1152,3:4,縦長3:4（≈1024²; 64の倍数）
+cyberrealistic_pony,CyberRealistic Pony,cyberrealistic pony|cyber realistic pony|pony diffusion v6 branch,12.7,1408,768,16:9,横長16:9（≈1024²; 64の倍数）
+cyberrealistic_pony,CyberRealistic Pony,cyberrealistic pony|cyber realistic pony|pony diffusion v6 branch,12.7,768,1408,9:16,縦長9:16（≈1024²; 64の倍数）
+ultra_realistic_stable_yogi_sdxl,Ultra Realistic By Stable Yogi (SDXL),ultra realistic by stable yogi|stable yogi sdxl|ultra realistic sdxl,10.0,1024,1024,1:1,ネイティブ1024²（正方形）
+ultra_realistic_stable_yogi_sdxl,Ultra Realistic By Stable Yogi (SDXL),ultra realistic by stable yogi|stable yogi sdxl|ultra realistic sdxl,10.0,1280,896,3:2,横長3:2（≈1024²; 64の倍数）
+ultra_realistic_stable_yogi_sdxl,Ultra Realistic By Stable Yogi (SDXL),ultra realistic by stable yogi|stable yogi sdxl|ultra realistic sdxl,10.0,896,1280,2:3,縦長2:3（≈1024²; 64の倍数）
+ultra_realistic_stable_yogi_sdxl,Ultra Realistic By Stable Yogi (SDXL),ultra realistic by stable yogi|stable yogi sdxl|ultra realistic sdxl,10.0,1152,896,4:3,横長4:3（≈1024²; 64の倍数）
+ultra_realistic_stable_yogi_sdxl,Ultra Realistic By Stable Yogi (SDXL),ultra realistic by stable yogi|stable yogi sdxl|ultra realistic sdxl,10.0,896,1152,3:4,縦長3:4（≈1024²; 64の倍数）
+ultra_realistic_stable_yogi_sdxl,Ultra Realistic By Stable Yogi (SDXL),ultra realistic by stable yogi|stable yogi sdxl|ultra realistic sdxl,10.0,1408,768,16:9,横長16:9（≈1024²; 64の倍数）
+ultra_realistic_stable_yogi_sdxl,Ultra Realistic By Stable Yogi (SDXL),ultra realistic by stable yogi|stable yogi sdxl|ultra realistic sdxl,10.0,768,1408,9:16,縦長9:16（≈1024²; 64の倍数）
+fluxed_up_flux_nsfw,Fluxed Up [Flux NSFW Checkpoint],fluxed up|flux nsfw checkpoint|fluxed up flux,4.0,1024,1024,1:1,ネイティブ1024²（正方形）
+fluxed_up_flux_nsfw,Fluxed Up [Flux NSFW Checkpoint],fluxed up|flux nsfw checkpoint|fluxed up flux,4.0,1280,896,3:2,横長3:2（≈1024²; 64の倍数）
+fluxed_up_flux_nsfw,Fluxed Up [Flux NSFW Checkpoint],fluxed up|flux nsfw checkpoint|fluxed up flux,4.0,896,1280,2:3,縦長2:3（≈1024²; 64の倍数）
+fluxed_up_flux_nsfw,Fluxed Up [Flux NSFW Checkpoint],fluxed up|flux nsfw checkpoint|fluxed up flux,4.0,1152,896,4:3,横長4:3（≈1024²; 64の倍数）
+fluxed_up_flux_nsfw,Fluxed Up [Flux NSFW Checkpoint],fluxed up|flux nsfw checkpoint|fluxed up flux,4.0,896,1152,3:4,縦長3:4（≈1024²; 64の倍数）
+fluxed_up_flux_nsfw,Fluxed Up [Flux NSFW Checkpoint],fluxed up|flux nsfw checkpoint|fluxed up flux,4.0,1408,768,16:9,横長16:9（≈1024²; 64の倍数）
+fluxed_up_flux_nsfw,Fluxed Up [Flux NSFW Checkpoint],fluxed up|flux nsfw checkpoint|fluxed up flux,4.0,768,1408,9:16,縦長9:16（≈1024²; 64の倍数）

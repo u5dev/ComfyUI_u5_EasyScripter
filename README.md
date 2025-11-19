@@ -246,7 +246,7 @@ EasyScripterと組み合わせて使える、ファイル名出力機能付き�
 
 MIT License
 
-Copyright (c) 2025 u5 EasyScripter
+Copyright (c) 2025 u5dev
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

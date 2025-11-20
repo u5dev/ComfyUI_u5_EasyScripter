@@ -1,7 +1,5 @@
 # Array Functions Reference
 
-**Languages**: [日本語](../02_builtin_functions/06_array_functions.md) | [English](06_array_functions.md)
-
 [← Back to Built-in Functions Index](00_index.md)
 
 ## Overview

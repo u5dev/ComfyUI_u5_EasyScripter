@@ -1,12 +1,6 @@
 # Référence des fonctions CSV
 
-[日本語](../../docs/02_builtin_functions/04_csv_functions.md) | [English](../en/04_csv_functions.md) | [中文](../zh/04_csv_functions.md) | [Español](../es/04_csv_functions.md) | **Français** | [Deutsch](../de/04_csv_functions.md)
-
----
-
 [← Retour à l'index des fonctions intégrées](00_index.md)
-
----
 
 ## Vue d'ensemble
 

@@ -1,9 +1,5 @@
 # Zeichenkettenfunktionen-Referenz
 
-**Sprachen**: [English](../02_builtin_functions/02_string_functions.md) | [日本語](../02_builtin_functions/02_string_functions.md) | [한국어](../ko/02_string_functions.md) | [Français](../fr/02_string_functions.md) | **Deutsch** | [Español](../es/02_string_functions.md)
-
-![](../img/comfyui_u5_easyscripter_banner_800x200.png)
-
 [← Zurück zum Index der integrierten Funktionen](00_index.md)
 
 Vollständige Referenz der Zeichenkettenfunktionen, die in u5 EasyScripter verfügbar sind.
@@ -284,6 +280,100 @@ result = JOIN(arr, "-")
 PRINT(result)  ' "A-B-C"
 result = JOIN(arr)
 PRINT(result)  ' "A,B,C"
+```
+
+### LTRIM(text)
+**Beschreibung**: Entfernt Leerzeichen links
+**Argumente**: text - Zeichenkette
+**Rückgabewert**: Zeichenkette mit entfernten Leerzeichen links
+**Beispiel**:
+```vba
+result = LTRIM("  Hello")
+PRINT(result)  ' "Hello"
+result = LTRIM("  Text  ")
+PRINT(result)  ' "Text  "
+```
+
+### RTRIM(text)
+**Beschreibung**: Entfernt Leerzeichen rechts
+**Argumente**: text - Zeichenkette
+**Rückgabewert**: Zeichenkette mit entfernten Leerzeichen rechts
+**Beispiel**:
+```vba
+result = RTRIM("Hello  ")
+PRINT(result)  ' "Hello"
+result = RTRIM("  Text  ")
+PRINT(result)  ' "  Text"
+```
+
+### UCASE(text)
+**Beschreibung**: Konvertiert zu Großbuchstaben (Alias für UPPER)
+**Argumente**: text - Zeichenkette
+**Rückgabewert**: In Großbuchstaben konvertierte Zeichenkette
+**Beispiel**:
+```vba
+result = UCASE("hello")
+PRINT(result)  ' "HELLO"
+```
+
+### LCASE(text)
+**Beschreibung**: Konvertiert zu Kleinbuchstaben (Alias für LOWER)
+**Argumente**: text - Zeichenkette
+**Rückgabewert**: In Kleinbuchstaben konvertierte Zeichenkette
+**Beispiel**:
+```vba
+result = LCASE("HELLO")
+PRINT(result)  ' "hello"
+```
+
+### PROPER(text)
+**Beschreibung**: Konvertiert zu Titelfall (Großschreibung des ersten Buchstabens jedes Wortes)
+**Argumente**: text - Zeichenkette
+**Rückgabewert**: In Titelfall konvertierte Zeichenkette
+**Beispiel**:
+```vba
+result = PROPER("hello world")
+PRINT(result)  ' "Hello World"
+result = PROPER("easyScripter node")
+PRINT(result)  ' "Easyscripter Node"
+```
+
+### CHR(code)
+**Beschreibung**: Konvertiert Zeichencode zu Zeichen
+**Argumente**: code - Zeichencode (0-127 im ASCII-Bereich)
+**Rückgabewert**: Entsprechendes Zeichen
+**Beispiel**:
+```vba
+result = CHR(65)
+PRINT(result)  ' "A"
+result = CHR(97)
+PRINT(result)  ' "a"
+result = CHR(48)
+PRINT(result)  ' "0"
+```
+
+### ASC(char)
+**Beschreibung**: Konvertiert Zeichen zu Zeichencode
+**Argumente**: char - Zeichen oder Zeichenkette (verwendet erstes Zeichen)
+**Rückgabewert**: Zeichencode (ASCII)
+**Beispiel**:
+```vba
+result = ASC("A")
+PRINT(result)  ' 65
+result = ASC("Hello")
+PRINT(result)  ' 72 ("H" Code)
+```
+
+### STR(value)
+**Beschreibung**: Konvertiert Zahl zu Zeichenkette
+**Argumente**: value - Zahl
+**Rückgabewert**: Als Zeichenkette konvertierte Zahl
+**Beispiel**:
+```vba
+result = STR(123)
+PRINT(result)  ' "123"
+result = STR(3.14)
+PRINT(result)  ' "3.14"
 ```
 
 ### URLENCODE(text, [encoding])

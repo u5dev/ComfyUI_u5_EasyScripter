@@ -1,6 +1,6 @@
 # Référence du langage de script
 
-[日本語](../../docs/01_syntax_reference.md) | [English](../en/01_syntax_reference.md) | [中文](../zh/01_syntax_reference.md) | [Español](../es/01_syntax_reference.md) | **Français** | [Deutsch](../de/01_syntax_reference.md)
+[日本語](../01_syntax_reference.md) | [English](../en/01_syntax_reference.md) | [中文](../zh/01_syntax_reference.md) | [Español](../es/01_syntax_reference.md) | **Français** | [Deutsch](../de/01_syntax_reference.md)
 
 ---
 

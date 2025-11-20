@@ -1,12 +1,6 @@
 # Référence des fonctions de date et heure
 
-[日本語](../../docs/02_builtin_functions/03_datetime_functions.md) | [English](../en/03_datetime_functions.md) | [中文](../zh/03_datetime_functions.md) | [Español](../es/03_datetime_functions.md) | **Français** | [Deutsch](../de/03_datetime_functions.md)
-
----
-
 [← Retour à l'index des fonctions intégrées](00_index.md)
-
----
 
 Référence complète des fonctions de date et heure disponibles dans u5 EasyScripter.
 

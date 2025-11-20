@@ -1,12 +1,6 @@
 # Référence des fonctions mathématiques
 
-[日本語](../../docs/02_builtin_functions/01_math_functions.md) | [English](../en/01_math_functions.md) | [中文](../zh/01_math_functions.md) | [Español](../es/01_math_functions.md) | **Français** | [Deutsch](../de/01_math_functions.md)
-
----
-
 [← Retour à l'index des fonctions intégrées](00_index.md)
-
----
 
 Référence complète des fonctions mathématiques disponibles dans u5 EasyScripter.
 

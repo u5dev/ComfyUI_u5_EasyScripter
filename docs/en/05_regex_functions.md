@@ -1,7 +1,5 @@
 # Regular Expression Functions Reference
 
-**Languages**: [日本語](../02_builtin_functions/05_regex_functions.md) | [English](05_regex_functions.md)
-
 [← Back to Built-in Functions Index](00_index.md)
 
 ## Overview

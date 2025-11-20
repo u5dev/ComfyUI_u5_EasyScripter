@@ -1,9 +1,5 @@
 # Typkonvertierungs- und Typprüfungsfunktionen-Referenz
 
-**Sprachen**: [English](../02_builtin_functions/07_type_functions.md) | [日本語](../02_builtin_functions/07_type_functions.md) | [한국어](../ko/07_type_functions.md) | [Français](../fr/07_type_functions.md) | **Deutsch** | [Español](../es/07_type_functions.md)
-
-![](../img/comfyui_u5_easyscripter_banner_800x200.png)
-
 [← Zurück zum Index der integrierten Funktionen](00_index.md)
 
 ## Übersicht

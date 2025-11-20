@@ -1,9 +1,5 @@
 # Reguläre Ausdrücke-Funktionen-Referenz
 
-**Sprachen**: [English](../02_builtin_functions/05_regex_functions.md) | [日本語](../02_builtin_functions/05_regex_functions.md) | [한국어](../ko/05_regex_functions.md) | [Français](../fr/05_regex_functions.md) | **Deutsch** | [Español](../es/05_regex_functions.md)
-
-![](../img/comfyui_u5_easyscripter_banner_800x200.png)
-
 [← Zurück zum Index der integrierten Funktionen](00_index.md)
 
 ## Übersicht

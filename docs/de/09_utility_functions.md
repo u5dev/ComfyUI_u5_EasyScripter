@@ -1,9 +1,5 @@
 # Hilfsfunktionen-Referenz
 
-**Sprachen**: [English](../02_builtin_functions/09_utility_functions.md) | [日本語](../02_builtin_functions/09_utility_functions.md) | [한국어](../ko/09_utility_functions.md) | [Français](../fr/09_utility_functions.md) | **Deutsch** | [Español](../es/09_utility_functions.md)
-
-![](../img/comfyui_u5_easyscripter_banner_800x200.png)
-
 [← Zurück zum Index der integrierten Funktionen](00_index.md)
 
 Hilfsfunktionen sind praktische Funktionsgruppen zur Unterstützung der Skriptentwicklung wie Debug-Ausgabe, Typprüfung und Eingabeverarbeitung.
@@ -136,6 +132,28 @@ configText = INPUT("configs/model_settings.txt")
 PRINT("Konfigurationsinhalt: " & configText)
 ```
 
+#### Koordination zwischen INPUT-Funktion und RELAY_OUTPUT
+
+Um Bilder oder Daten, die mit der INPUT-Funktion geladen wurden, an nachfolgende Knoten zu übergeben, verwenden Sie die RELAY_OUTPUT-Variable.
+
+```vba
+' Prompt aus Textdatei lesen und an nachfolgendes CLIPTextEncode übergeben
+PROMPT_TEXT = INPUT("prompts/positive.txt")
+RELAY_OUTPUT = PROMPT_TEXT
+
+' Oder Bilddatei lesen und an nachfolgendes LoadImage übergeben
+IMG1 = INPUT("reference_images/base.png")
+RELAY_OUTPUT = IMG1
+```
+
+**RETURN1/RETURN2 vs RELAY_OUTPUT**:
+- RETURN1/RETURN2: Nur primitive Typen (INT, FLOAT, STRING)
+- RELAY_OUTPUT: Unterstützt ANY-Typ (Objekte wie torch.Tensor, list, dict sind ebenfalls möglich)
+
+**Hinweis**:
+- Wenn die Datei nicht existiert, wird eine Warnmeldung mit PRINT ausgegeben und None zurückgegeben
+- Das Lesen großer Dateien (Bilder usw.) kann einige Zeit in Anspruch nehmen
+
 ---
 
 ### ISFILEEXIST(path, [flg])
@@ -249,7 +267,12 @@ END IF
 
 **Rückgabewert**: Keine (gibt intern 0.0 zurück)
 
-**Beispiel**:
+**Syntax**:
+```vba
+SLEEP(milliseconds)
+```
+
+**Verwendungsbeispiele**:
 ```vba
 ' Standard-10ms-Sleep
 SLEEP()
@@ -265,7 +288,29 @@ WHILE VAL1 < 100
 WEND
 PRINT("Schleife abgeschlossen: " & VAL1)
 RETURN1 = VAL1
+
+' Verarbeitungssynchronisierung
+PRINT("Verarbeitung startet")
+result = VAL1 * 2
+SLEEP(1000)  ' 1 Sekunde warten
+PRINT("Verarbeitung abgeschlossen: " & result)
+RETURN1 = result
 ```
+
+**Hauptzwecke**:
+1. **Geschwindigkeitssteuerung von WHILE()-Schleifen**: CPU-Auslastung reduzieren und Systemlast verringern
+2. **Verarbeitungssynchronisierung**: Warten auf externe Systemantwort oder beabsichtigte Verzögerungsverarbeitung
+3. **Debugging**: Temporäre Pause zur Beobachtung des Verarbeitungsflusses
+
+**ComfyUI-Integration**:
+- Koordinierte Arbeit mit ComfyUI's thread-basierter Warteschlangenverwaltung (ScriptExecutionQueue)
+- Synchrone blockierende Ausführung durch time.sleep()
+- ScriptExecutionQueue garantiert Sicherheit bei gleichzeitiger Ausführung mehrerer EasyScripter-Knoten
+
+**Hinweise**:
+- SLEEP() blockiert den aktuellen Thread (andere Verarbeitungen werden nicht ausgeführt)
+- Asynchrone Verarbeitung (asyncio) wird nicht verwendet (ComfyUI ist nicht ereignisschleifengesteuert)
+- Lange Sleeps erhöhen die Ausführungszeit des gesamten Workflows
 
 ---
 
@@ -422,6 +467,279 @@ SELECT CASE type_name
     CASE ELSE
         PRINT("Sonstiger Typ: " & type_name)
 END SELECT
+```
+
+---
+
+### GETANYVALUEINT([any_data])
+
+**Beschreibung**: Ruft ganzzahligen Wert aus ANY-Typ-Daten ab
+
+**Argumente**:
+- any_data (Any, optional) - Daten
+  - Ohne Argumente werden automatisch Daten vom any_input-Eingabe-Socket verwendet
+
+**Rückgabewert**: int - Ganzzahlwert (0, wenn nicht abrufbar)
+
+**Beispiel**:
+```vba
+' Ganzzahlwert vom any_input-Eingabe-Socket abrufen
+int_value = GETANYVALUEINT()
+PRINT("Ganzzahlwert: " & int_value)
+RETURN1 = int_value
+```
+
+---
+
+### GETANYVALUEFLOAT([any_data])
+
+**Beschreibung**: Ruft Gleitkommawert aus ANY-Typ-Daten ab
+
+**Argumente**:
+- any_data (Any, optional) - Daten
+  - Ohne Argumente werden automatisch Daten vom any_input-Eingabe-Socket verwendet
+
+**Rückgabewert**: float - Gleitkommawert (0.0, wenn nicht abrufbar)
+
+**Beispiel**:
+```vba
+' Gleitkommawert vom any_input-Eingabe-Socket abrufen
+float_value = GETANYVALUEFLOAT()
+PRINT("Gleitkommawert: " & float_value)
+RETURN1 = float_value
+```
+
+---
+
+### GETANYSTRING([any_data])
+
+**Beschreibung**: Ruft Zeichenkette aus ANY-Typ-Daten ab
+
+**Argumente**:
+- any_data (Any, optional) - Daten
+  - Ohne Argumente werden automatisch Daten vom any_input-Eingabe-Socket verwendet
+
+**Rückgabewert**: str - Zeichenkette (leere Zeichenkette, wenn nicht abrufbar)
+
+**Beispiel**:
+```vba
+' Zeichenkette vom any_input-Eingabe-Socket abrufen
+str_value = GETANYSTRING()
+PRINT("Zeichenkette: " & str_value)
+RETURN1 = str_value
+```
+
+---
+
+## Typprüfungsfunktionen
+
+### ISNUMERIC(value)
+
+**Beschreibung**: Prüft, ob ein Wert numerisch ist
+
+**Argumente**:
+- value - Zu prüfender Wert
+
+**Rückgabewert**: 1 (numerisch) oder 0 (nicht numerisch)
+
+**Beispiel**:
+```vba
+result = ISNUMERIC("123")      ' 1
+PRINT("ISNUMERIC('123') = " & result)
+result = ISNUMERIC("12.34")    ' 1
+PRINT("ISNUMERIC('12.34') = " & result)
+result = ISNUMERIC("abc")      ' 0
+PRINT("ISNUMERIC('abc') = " & result)
+result = ISNUMERIC("")         ' 0
+PRINT("ISNUMERIC('') = " & result)
+
+' Praktisches Beispiel: Eingabewertvalidierung
+IF ISNUMERIC(TXT1) THEN
+    value = CDBL(TXT1)
+    PRINT("Als Zahlenwert verarbeitet: " & value)
+ELSE
+    PRINT("Fehler: Kein Zahlenwert")
+END IF
+```
+
+---
+
+### ISDATE(value)
+
+**Beschreibung**: Prüft, ob ein Wert als Datum interpretierbar ist
+
+**Argumente**:
+- value - Zu prüfender Wert
+
+**Rückgabewert**: 1 (Datum) oder 0 (kein Datum)
+
+**Beispiel**:
+```vba
+result = ISDATE("2024-01-15")     ' 1
+PRINT("ISDATE('2024-01-15') = " & result)
+result = ISDATE("2024/01/15")     ' 1
+PRINT("ISDATE('2024/01/15') = " & result)
+result = ISDATE("15:30:00")       ' 1 (auch Zeitangaben werden erkannt)
+PRINT("ISDATE('15:30:00') = " & result)
+result = ISDATE("hello")          ' 0
+PRINT("ISDATE('hello') = " & result)
+
+' Praktisches Beispiel: Datumsvalidierung
+IF ISDATE(TXT1) THEN
+    dateVal = DATEVALUE(TXT1)
+    PRINT("Als Datum verarbeitet: " & dateVal)
+ELSE
+    PRINT("Fehler: Kein Datumsformat")
+END IF
+```
+
+**Unterstützte Formate**:
+- `YYYY/MM/DD HH:MM:SS`
+- `YYYY/MM/DD`
+- `YYYY-MM-DD HH:MM:SS`
+- `YYYY-MM-DD`
+- `MM/DD/YYYY`
+- `DD/MM/YYYY`
+- `HH:MM:SS`
+- `HH:MM`
+
+---
+
+### ISARRAY(variable_name)
+
+**Beschreibung**: Prüft, ob eine Variable ein Array ist
+
+**Argumente**:
+- variable_name - Variablenname (Zeichenkette) oder Array-Variablenreferenz (ARR[]-Notation)
+
+**Rückgabewert**: 1 (Array) oder 0 (kein Array)
+
+**Beispiel**:
+```vba
+REDIM arr, 10
+result = ISARRAY(arr[])      ' 1 (Array-Referenz)
+PRINT("ISARRAY(arr[]) = " & result)
+result = ISARRAY("arr")      ' 1 (Array-Name als Zeichenkette)
+PRINT("ISARRAY('arr') = " & result)
+result = ISARRAY("VAL1")     ' 0 (normale Variable)
+PRINT("ISARRAY('VAL1') = " & result)
+
+' Praktisches Beispiel: Variablentypprüfung
+REDIM myData, 5
+myData[0] = "a"
+myData[1] = "b"
+IF ISARRAY(myData[]) THEN
+    PRINT("Es ist ein Array. Anzahl Elemente: " & (UBOUND(myData[]) + 1))
+ELSE
+    PRINT("Es ist kein Array")
+END IF
+```
+
+**Hinweis**:
+- Übergeben Sie den Array-Namen als Zeichenkette oder eine Array-Variablenreferenz in ARR[]-Notation
+
+---
+
+### TYPE(value)
+
+**Beschreibung**: Gibt den Typ einer Variable als Zeichenkette zurück
+
+**Argumente**:
+- value - Wert, dessen Typ ermittelt werden soll
+
+**Rückgabewert**: Typname ("NUMBER", "STRING", "BOOLEAN", "ARRAY", "NULL", "OBJECT")
+
+**Beispiel**:
+```vba
+typeName = TYPE(123)           ' "NUMBER"
+PRINT("TYPE(123) = " & typeName)
+typeName = TYPE("hello")       ' "STRING"
+PRINT("TYPE('hello') = " & typeName)
+typeName = TYPE(1 > 0)         ' "NUMBER"
+PRINT("TYPE(1 > 0) = " & typeName)
+
+REDIM arr, 5
+typeName = TYPE(arr[])         ' "OBJECT"
+PRINT("TYPE(arr[]) = " & typeName)
+
+' Praktisches Beispiel: Universelle Typverarbeitung
+myValue = VAL1
+dataType = TYPE(myValue)
+PRINT("TYPE(myValue) = " & dataType)
+SELECT CASE dataType
+    CASE "NUMBER"
+        PRINT("Zahlenwert: " & myValue)
+    CASE "STRING"
+        PRINT("Zeichenkette: " & myValue)
+    CASE "ARRAY"
+        PRINT("Array (Anzahl Elemente: " & (UBOUND(myValue[]) + 1) & ")")
+    CASE "NULL"
+        PRINT("Kein Wert vorhanden")
+END SELECT
+```
+
+---
+
+## Praktische Beispiele
+
+### Nutzung von Debug-Ausgaben
+
+```vba
+' Werte in jedem Verarbeitungsschritt überprüfen
+originalValue = VAL1
+PRINT("Ursprünglicher Wert: " & originalValue)
+
+processedValue = originalValue * 2
+PRINT("Nach Verdopplung: " & processedValue)
+
+finalValue = processedValue + 10
+PRINT("Endwert: " & finalValue)
+
+RETURN1 = finalValue
+PRINT("In RETURN1 zugewiesen: " & RETURN1)
+```
+
+### Eingabewertvalidierung
+
+```vba
+' Prüfen, ob numerisch, dann verarbeiten
+IF ISNUMERIC(TXT1) THEN
+    number = CDBL(TXT1)
+    PRINT("TXT1 in Zahl konvertiert: " & number)
+    result = number * VAL1
+    PRINT("Berechnungsergebnis: " & result)
+    RETURN1 = result
+    PRINT("In RETURN1 zugewiesen: " & RETURN1)
+ELSE
+    PRINT("Fehler: TXT1 ist keine Zahl")
+    RETURN1 = 0
+    PRINT("Standardwert in RETURN1 zugewiesen: " & RETURN1)
+END IF
+```
+
+### Verzweigung je nach Typ
+
+```vba
+' Verarbeitung je nach Datentyp ändern
+myData = VAL1
+dataType = TYPE(myData)
+PRINT("TYPE(myData) = " & dataType)
+
+IF dataType = "NUMBER" THEN
+    result = myData * 2
+    PRINT("Zahlenverarbeitung: " & result)
+ELSEIF dataType = "STRING" THEN
+    result = UCASE(myData)
+    PRINT("Zeichenkettenverarbeitung: " & result)
+ELSEIF dataType = "ARRAY" THEN
+    count = UBOUND(myData[]) + 1
+    PRINT("Array-Verarbeitung: Anzahl Elemente=" & count)
+    FOR i = 0 TO UBOUND(myData[])
+        PRINT("  [" & i & "] = " & myData[i])
+    NEXT
+ELSE
+    PRINT("Nicht unterstützter Typ: " & dataType)
+END IF
 ```
 
 ---

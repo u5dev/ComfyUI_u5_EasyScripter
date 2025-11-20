@@ -1,7 +1,5 @@
 # Built-in Function Complete Index
 
-**Languages**: [日本語](../02_builtin_functions/00_index.md) | [English](00_index.md)
-
 [← Back to Main Documentation](README.md)
 
 **This page is the reference index for u5 EasyScripter's built-in functions.**

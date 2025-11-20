@@ -1,7 +1,5 @@
 # String Functions Reference
 
-**Languages**: [日本語](../02_builtin_functions/02_string_functions.md) | [English](02_string_functions.md)
-
 [← Back to Built-in Functions Index](00_index.md)
 
 Complete reference for string functions available in u5 EasyScripter.

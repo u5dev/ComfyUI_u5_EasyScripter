@@ -1,6 +1,6 @@
 # 实用工具函数参考
 
-[← 返回内置函数索引](00_index.md) | [English](../02_builtin_functions/09_utility_functions.md) | [日本語](../02_builtin_functions/09_utility_functions.md) | [Français](../fr/09_utility_functions.md) | [Español](../es/09_utility_functions.md)
+[← 返回内置函数索引](00_index.md)
 
 实用工具函数是辅助脚本开发的便捷函数群，提供调试输出、类型判定、输入处理等功能。
 
@@ -179,6 +179,28 @@ PRINT("设置内容: " & configText)
 - INPUT: 读取文件 → 数据
 - 两函数都仅允许相对路径，拒绝绝对路径·UNC路径
 
+#### INPUT函数与RELAY_OUTPUT的联动
+
+要将INPUT函数读取的图像或数据传递给后续节点，请使用RELAY_OUTPUT变量。
+
+```vba
+' 从文本文件读取提示词并传递给后续的CLIPTextEncode
+PROMPT_TEXT = INPUT("prompts/positive.txt")
+RELAY_OUTPUT = PROMPT_TEXT
+
+' 或读取图像文件并传递给后续的LoadImage
+IMG1 = INPUT("reference_images/base.png")
+RELAY_OUTPUT = IMG1
+```
+
+**RETURN1/RETURN2 vs RELAY_OUTPUT**:
+- RETURN1/RETURN2: 仅限原始类型 (INT, FLOAT, STRING)
+- RELAY_OUTPUT: 支持ANY类型 (torch.Tensor, list, dict等对象也可以)
+
+**注意**:
+- 如果文件不存在，将通过PRINT显示警告消息并返回None
+- 读取大文件(图像等)可能需要一些时间
+
 ---
 
 ### ISFILEEXIST(path, [flg])
@@ -232,47 +254,116 @@ PRINT("文件大小: " & info["file_size"] & " bytes")
 
 ### VRAMFREE([min_free_vram_gb])
 
-**说明**: 释放VRAM和RAM（卸载模型、清除缓存、GC）
+**说明**: 释放VRAM和RAM的函数。执行模型卸载、缓存清除、垃圾回收。
+
+**⚠️ WARNING**: 模型卸载是一项敏感操作。根据执行时机，可能会在工作流执行期间引起意外行为。使用时请充分注意。
+
+**语法**:
+```vba
+result = VRAMFREE(min_free_vram_gb)
+```
 
 **参数**:
-- min_free_vram_gb (float, optional) - 最小空闲VRAM（GB）阈值（默认=0.0）
+- `min_free_vram_gb` (float, 可选): 执行阈值（GB单位）
+  - 如果当前空闲VRAM大于或等于此值，则跳过处理
+  - 默认值: 0.0（始终执行）
 
-**返回值**: None
+**返回值**:
+dict（执行结果的详细信息）
+- `success`: 执行成功标志（bool）
+- `message`: 执行结果消息（str）
+- `freed_vram_gb`: 已释放VRAM量（float）
+- `freed_ram_gb`: 已释放RAM量（float）
+- `initial_status`: 执行前的内存状态（dict）
+- `final_status`: 执行后的内存状态（dict）
+- `actions_performed`: 已执行操作的列表（list）
 
-**功能**:
-1. **模型卸载**: 从VRAM卸载所有ComfyUI模型
-2. **缓存清除**: 清除PyTorch CUDA缓存
-3. **垃圾回收**: 执行Python垃圾回收
-4. **阈值控制**: 仅在空闲VRAM低于阈值时执行
-
-**示例**:
+**使用示例**:
 ```vba
-' 无条件释放内存
-VRAMFREE()
+' 始终执行（无阈值）
+result = VRAMFREE(0.0)
+PRINT("VRAM freed: " & result["freed_vram_gb"] & " GB")
 
-' 空闲VRAM少于2GB时释放
-VRAMFREE(2.0)
+' 仅在空闲VRAM低于2GB时执行
+result = VRAMFREE(2.0)
+IF result["success"] = TRUE THEN
+    PRINT("Cleanup completed")
+ELSE
+    PRINT("Cleanup failed")
+END IF
 ```
+
+**执行内容**:
+1. 获取初始内存状态
+2. 阈值检查（跳过判定）
+3. 卸载ComfyUI模型
+4. 清除ComfyUI软缓存
+5. 清除PyTorch GPU缓存
+6. Python垃圾回收（GC）
+7. 向ComfyUI prompt_queue设置标志
+8. 监视异步刷新（3秒）
+9. 计算内存释放量
+
+**注意事项**:
+- 在ComfyUI环境外，可用功能受限（limited mode）
+- 在不支持CUDA的环境中，可能无法获取VRAM信息
+- 由于异步处理，执行完成后可能会有轻微延迟才能释放内存
 
 ---
 
 ### SLEEP([milliseconds])
 
-**说明**: 暂停处理指定毫秒（默认: 10ms）
+**说明**: 暂停处理指定毫秒（睡眠）。用于WHILE()循环的速度控制和处理等待同步。
 
 **参数**:
-- milliseconds (int, optional) - 暂停时间（毫秒）（默认=10）
+- milliseconds (FLOAT, 可选): 睡眠时间（毫秒），默认: 10ms
 
-**返回值**: None
+**返回值**: 无（内部返回0.0）
 
-**示例**:
+**语法**:
 ```vba
-' 暂停1秒
-SLEEP(1000)
-
-' 暂停100毫秒
-SLEEP(100)
+SLEEP(milliseconds)
 ```
+
+**使用示例**:
+```vba
+' 默认10ms睡眠
+SLEEP()
+
+' 0.5秒睡眠
+SLEEP(500)
+
+' WHILE()循环的速度控制（降低CPU使用率）
+VAL1 = 0
+WHILE VAL1 < 100
+    VAL1 = VAL1 + 1
+    SLEEP(100)  ' 等待100ms
+WEND
+PRINT("循环完成: " & VAL1)
+RETURN1 = VAL1
+
+' 处理等待同步
+PRINT("处理开始")
+result = VAL1 * 2
+SLEEP(1000)  ' 等待1秒
+PRINT("处理完成: " & result)
+RETURN1 = result
+```
+
+**主要用途**:
+1. **WHILE()循环的速度控制**: 降低CPU使用率，减轻系统负载
+2. **处理等待同步**: 等待外部系统响应或有意延迟处理
+3. **调试**: 为观察处理流程而暂停
+
+**ComfyUI集成**:
+- 与ComfyUI的基于线程的排队控制（ScriptExecutionQueue）协同工作
+- 通过time.sleep()进行同步阻塞执行
+- ScriptExecutionQueue保证多个EasyScripter节点同时执行时的安全性
+
+**注意事项**:
+- SLEEP()会阻塞当前线程（不执行其他处理）
+- 不使用异步处理（asyncio）（ComfyUI不是事件循环驱动）
+- 长时间睡眠会增加整个工作流的执行时间
 
 ---
 
@@ -489,6 +580,70 @@ PRINT(result)  ' 1
 ```vba
 typeStr = TYPE(123)
 PRINT(typeStr)  ' "int"
+```
+
+---
+
+## 实用示例
+
+### 调试输出的应用
+
+```vba
+' 确认处理的各个阶段的值
+originalValue = VAL1
+PRINT("原始值: " & originalValue)
+
+processedValue = originalValue * 2
+PRINT("2倍后: " & processedValue)
+
+finalValue = processedValue + 10
+PRINT("最终值: " & finalValue)
+
+RETURN1 = finalValue
+PRINT("赋值给RETURN1: " & RETURN1)
+```
+
+### 输入值验证
+
+```vba
+' 检查是否为数值后再处理
+IF ISNUMERIC(TXT1) THEN
+    number = CDBL(TXT1)
+    PRINT("将TXT1转换为数值: " & number)
+    result = number * VAL1
+    PRINT("计算结果: " & result)
+    RETURN1 = result
+    PRINT("赋值给RETURN1: " & RETURN1)
+ELSE
+    PRINT("错误: TXT1不是数值")
+    RETURN1 = 0
+    PRINT("将默认值赋给RETURN1: " & RETURN1)
+END IF
+```
+
+### 根据类型进行处理分支
+
+```vba
+' 根据数据类型改变处理
+myData = VAL1
+dataType = TYPE(myData)
+PRINT("TYPE(myData) = " & dataType)
+
+IF dataType = "NUMBER" THEN
+    result = myData * 2
+    PRINT("数值处理: " & result)
+ELSEIF dataType = "STRING" THEN
+    result = UCASE(myData)
+    PRINT("字符串处理: " & result)
+ELSEIF dataType = "ARRAY" THEN
+    count = UBOUND(myData[]) + 1
+    PRINT("数组处理: 元素数=" & count)
+    FOR i = 0 TO UBOUND(myData[])
+        PRINT("  [" & i & "] = " & myData[i])
+    NEXT
+ELSE
+    PRINT("不支持的类型: " & dataType)
+END IF
 ```
 
 ---

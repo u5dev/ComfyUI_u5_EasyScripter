@@ -1,9 +1,5 @@
 # Mathematikfunktionen-Referenz
 
-**Sprachen**: [English](../02_builtin_functions/01_math_functions.md) | [日本語](../02_builtin_functions/01_math_functions.md) | [한국어](../ko/01_math_functions.md) | [Français](../fr/01_math_functions.md) | **Deutsch** | [Español](../es/01_math_functions.md)
-
-![](../img/comfyui_u5_easyscripter_banner_800x200.png)
-
 [← Zurück zum Index der integrierten Funktionen](00_index.md)
 
 Vollständige Referenz der mathematischen Funktionen, die in u5 EasyScripter verfügbar sind.

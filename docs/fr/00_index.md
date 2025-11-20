@@ -1,9 +1,5 @@
 # Index complet des fonctions intégrées
 
-[日本語](../../docs/02_builtin_functions/00_index.md) | [English](../en/00_index.md) | [中文](../zh/00_index.md) | [Español](../es/00_index.md) | **Français** | [Deutsch](../de/00_index.md)
-
----
-
 [← Retour au document principal](README.md)
 
 **Cette page est l'index de référence des fonctions intégrées de u5 EasyScripter.**

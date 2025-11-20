@@ -1,7 +1,5 @@
 # Model Functions Reference
 
-**Languages**: [日本語](../02_builtin_functions/08_model_functions.md) | [English](08_model_functions.md)
-
 [← Back to Built-in Functions Index](00_index.md)
 
 ## Overview

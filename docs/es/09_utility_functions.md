@@ -161,27 +161,56 @@ END IF
 
 **⚠️ ADVERTENCIA**: La descarga de modelos es una operación delicada. Dependiendo del momento de ejecución, puede causar comportamiento inesperado durante la ejecución del workflow. Use con precaución.
 
+**Sintaxis**:
+```vba
+result = VRAMFREE(min_free_vram_gb)
+```
+
 **Parámetros**:
 - `min_free_vram_gb` (float, opcional): Umbral de ejecución (en GB)
   - Si la VRAM libre actual es igual o mayor a este valor, omite el procesamiento
   - Predeterminado: 0.0 (siempre ejecutar)
 
-**Valor de retorno**: dict (información detallada del resultado de ejecución)
+**Valor de retorno**:
+dict (información detallada del resultado de ejecución)
 - `success`: Bandera de éxito de ejecución (bool)
 - `message`: Mensaje de resultado (str)
 - `freed_vram_gb`: Cantidad de VRAM liberada (float)
 - `freed_ram_gb`: Cantidad de RAM liberada (float)
+- `initial_status`: Estado de memoria antes de la ejecución (dict)
+- `final_status`: Estado de memoria después de la ejecución (dict)
+- `actions_performed`: Lista de acciones ejecutadas (list)
 
-**Ejemplo**:
+**Ejemplo de uso**:
 ```vba
+' Siempre ejecutar (sin umbral)
 result = VRAMFREE(0.0)
 PRINT("VRAM freed: " & result["freed_vram_gb"] & " GB")
 
+' Ejecutar solo si VRAM libre es menor a 2GB
 result = VRAMFREE(2.0)
 IF result["success"] = TRUE THEN
     PRINT("Cleanup completed")
+ELSE
+    PRINT("Cleanup failed")
 END IF
 ```
+
+**Contenido de ejecución**:
+1. Obtención de estado de memoria inicial
+2. Verificación de umbral (determinación de omisión)
+3. Descarga de modelos ComfyUI
+4. Limpieza de caché suave de ComfyUI
+5. Limpieza de caché GPU de PyTorch
+6. Recolección de basura de Python (GC)
+7. Configuración de bandera en prompt_queue de ComfyUI
+8. Monitoreo de descarga asíncrona (3 segundos)
+9. Cálculo de cantidad de memoria liberada
+
+**Notas**:
+- Fuera del entorno ComfyUI, las funciones disponibles están limitadas (modo limitado)
+- En entornos sin soporte CUDA, es posible que no se pueda obtener información de VRAM
+- Debido al procesamiento asíncrono, la memoria puede liberarse con un ligero retraso después de la finalización de la ejecución
 
 ---
 
@@ -192,18 +221,52 @@ END IF
 **Argumentos**:
 - milliseconds (FLOAT, opcional): Tiempo de sleep (milisegundos), predeterminado: 10ms
 
-**Valor de retorno**: Ninguno (internamente devuelve 0.0)
+**Valor de retorno**: Ninguno (internalmente devuelve 0.0)
 
-**Ejemplo**:
+**Sintaxis**:
 ```vba
-SLEEP(500)  ' Sleep de 0.5 segundos
+SLEEP(milliseconds)
+```
 
+**Ejemplo de uso**:
+```vba
+' Sleep predeterminado de 10ms
+SLEEP()
+
+' Sleep de 0.5 segundos
+SLEEP(500)
+
+' Control de velocidad de bucle WHILE() (reducción de uso de CPU)
 VAL1 = 0
 WHILE VAL1 < 100
     VAL1 = VAL1 + 1
     SLEEP(100)  ' Esperar 100ms
 WEND
+PRINT("Bucle completado: " & VAL1)
+RETURN1 = VAL1
+
+' Sincronización de espera de procesamiento
+PRINT("Inicio de procesamiento")
+result = VAL1 * 2
+SLEEP(1000)  ' Esperar 1 segundo
+PRINT("Procesamiento completado: " & result)
+RETURN1 = result
 ```
+
+**Usos principales**:
+1. **Control de velocidad de bucles WHILE()**: Reduce el uso de CPU y alivia la carga del sistema
+2. **Sincronización de espera de procesamiento**: Espera de respuesta del sistema externo o procesamiento de retraso intencional
+3. **Depuración**: Pausa temporal para observar el flujo de procesamiento
+
+**Integración ComfyUI**:
+- Funciona en coordinación con el control de cola basado en hilos de ComfyUI (ScriptExecutionQueue)
+- Ejecución de bloqueo sincrónico mediante time.sleep()
+- ScriptExecutionQueue garantiza la seguridad durante la ejecución simultánea de múltiples nodos EasyScripter
+
+**Notas**:
+- SLEEP() bloquea el hilo actual (no se ejecutan otros procesos)
+- No se usa procesamiento asíncrono (asyncio) (ComfyUI no está impulsado por bucle de eventos)
+- Los sleeps prolongados aumentan el tiempo de ejecución de todo el workflow
 
 ---
 
@@ -297,16 +360,62 @@ PRINT("Tipo: " & type_name)
 ```
 
 ### GETANYVALUEINT([any_data])
+
 **Descripción**: Obtiene valor entero de datos tipo ANY
+
+**Argumentos**:
+- any_data (Any, opcional) - Datos
+  - Si se omite el argumento, se utilizan automáticamente los datos del socket de entrada any_input
+
 **Valor de retorno**: int - Valor entero (0 si no se puede obtener)
 
+**Ejemplo**:
+```vba
+' Obtener valor entero desde socket de entrada any_input
+int_value = GETANYVALUEINT()
+PRINT("Valor entero: " & int_value)
+RETURN1 = int_value
+```
+
+---
+
 ### GETANYVALUEFLOAT([any_data])
+
 **Descripción**: Obtiene valor de punto flotante de datos tipo ANY
+
+**Argumentos**:
+- any_data (Any, opcional) - Datos
+  - Si se omite el argumento, se utilizan automáticamente los datos del socket de entrada any_input
+
 **Valor de retorno**: float - Valor de punto flotante (0.0 si no se puede obtener)
 
+**Ejemplo**:
+```vba
+' Obtener valor de punto flotante desde socket de entrada any_input
+float_value = GETANYVALUEFLOAT()
+PRINT("Valor de punto flotante: " & float_value)
+RETURN1 = float_value
+```
+
+---
+
 ### GETANYSTRING([any_data])
+
 **Descripción**: Obtiene cadena de datos tipo ANY
+
+**Argumentos**:
+- any_data (Any, opcional) - Datos
+  - Si se omite el argumento, se utilizan automáticamente los datos del socket de entrada any_input
+
 **Valor de retorno**: str - Cadena (cadena vacía si no se puede obtener)
+
+**Ejemplo**:
+```vba
+' Obtener cadena desde socket de entrada any_input
+str_value = GETANYSTRING()
+PRINT("Cadena: " & str_value)
+RETURN1 = str_value
+```
 
 ---
 
@@ -364,6 +473,68 @@ SELECT CASE dataType
     CASE "STRING"
         PRINT("Cadena: " & myValue)
 END SELECT
+```
+
+## Ejemplos prácticos
+
+### Uso de salida de depuración
+
+```vba
+' Verificar valores en cada etapa del procesamiento
+originalValue = VAL1
+PRINT("Valor original: " & originalValue)
+
+processedValue = originalValue * 2
+PRINT("Después de duplicar: " & processedValue)
+
+finalValue = processedValue + 10
+PRINT("Valor final: " & finalValue)
+
+RETURN1 = finalValue
+PRINT("Asignado a RETURN1: " & RETURN1)
+```
+
+### Validación de valores de entrada
+
+```vba
+' Verificar si es numérico antes de procesar
+IF ISNUMERIC(TXT1) THEN
+    number = CDBL(TXT1)
+    PRINT("TXT1 convertido a número: " & number)
+    result = number * VAL1
+    PRINT("Resultado del cálculo: " & result)
+    RETURN1 = result
+    PRINT("Asignado a RETURN1: " & RETURN1)
+ELSE
+    PRINT("Error: TXT1 no es un número")
+    RETURN1 = 0
+    PRINT("Valor predeterminado asignado a RETURN1: " & RETURN1)
+END IF
+```
+
+### Ramificación de procesamiento según el tipo
+
+```vba
+' Cambiar el procesamiento según el tipo de datos
+myData = VAL1
+dataType = TYPE(myData)
+PRINT("TYPE(myData) = " & dataType)
+
+IF dataType = "NUMBER" THEN
+    result = myData * 2
+    PRINT("Procesamiento numérico: " & result)
+ELSEIF dataType = "STRING" THEN
+    result = UCASE(myData)
+    PRINT("Procesamiento de cadena: " & result)
+ELSEIF dataType = "ARRAY" THEN
+    count = UBOUND(myData[]) + 1
+    PRINT("Procesamiento de array: elementos=" & count)
+    FOR i = 0 TO UBOUND(myData[])
+        PRINT("  [" & i & "] = " & myData[i])
+    NEXT
+ELSE
+    PRINT("Tipo no compatible: " & dataType)
+END IF
 ```
 
 ---

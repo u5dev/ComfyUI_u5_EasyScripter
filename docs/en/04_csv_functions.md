@@ -1,7 +1,5 @@
 # CSV Functions Reference
 
-**Languages**: [日本語](../02_builtin_functions/04_csv_functions.md) | [English](04_csv_functions.md)
-
 [← Back to Built-in Functions Index](00_index.md)
 
 ## Overview

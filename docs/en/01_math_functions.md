@@ -1,7 +1,5 @@
 # Mathematical Functions Reference
 
-**Languages**: [日本語](../02_builtin_functions/01_math_functions.md) | [English](01_math_functions.md)
-
 [← Back to Built-in Functions Index](00_index.md)
 
 Complete reference for mathematical functions available in u5 EasyScripter.

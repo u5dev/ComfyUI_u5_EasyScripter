@@ -1,6 +1,6 @@
 # 类型转换·类型判断函数参考
 
-[← 返回内置函数索引](00_index.md) | [English](../02_builtin_functions/07_type_functions.md) | [日本語](../02_builtin_functions/07_type_functions.md) | [Français](../fr/07_type_functions.md) | [Español](../es/07_type_functions.md)
+[← 返回内置函数索引](00_index.md)
 
 ## 概述
 

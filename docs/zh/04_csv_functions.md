@@ -1,6 +1,6 @@
 # CSV函数参考
 
-[← 返回内置函数索引](00_index.md) | [English](../02_builtin_functions/04_csv_functions.md) | [日本語](../02_builtin_functions/04_csv_functions.md) | [Français](../fr/04_csv_functions.md) | [Español](../es/04_csv_functions.md)
+[← 返回内置函数索引](00_index.md)
 
 ## 概述
 

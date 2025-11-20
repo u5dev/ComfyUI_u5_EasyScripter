@@ -1,12 +1,6 @@
 # Référence des fonctions de conversion et jugement de type
 
-[日本語](../../docs/02_builtin_functions/07_type_functions.md) | [English](../en/07_type_functions.md) | [中文](../zh/07_type_functions.md) | [Español](../es/07_type_functions.md) | **Français** | [Deutsch](../de/07_type_functions.md)
-
----
-
 [← Retour à l'index des fonctions intégrées](00_index.md)
-
----
 
 ## Vue d'ensemble
 

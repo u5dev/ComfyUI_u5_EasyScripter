@@ -1,6 +1,6 @@
 # 更新历史 (CHANGELOG)
 
-[日本語](../../docs/CHANGELOG.md) | [English](../en/CHANGELOG.md) | [中文](../zh/CHANGELOG.md) | [Español](../es/CHANGELOG.md) | [Français](../fr/CHANGELOG.md) | [Deutsch](../de/CHANGELOG.md)
+[日本語](../CHANGELOG.md) | [English](../en/CHANGELOG.md) | [中文](../zh/CHANGELOG.md) | [Español](../es/CHANGELOG.md) | [Français](../fr/CHANGELOG.md) | [Deutsch](../de/CHANGELOG.md)
 
 ---
 

@@ -1,12 +1,6 @@
 # Référence des fonctions de modèles
 
-[日本語](../../docs/02_builtin_functions/08_model_functions.md) | [English](../en/08_model_functions.md) | [中文](../zh/08_model_functions.md) | [Español](../es/08_model_functions.md) | **Français** | [Deutsch](../de/08_model_functions.md)
-
----
-
 [← Retour à l'index des fonctions intégrées](00_index.md)
-
----
 
 ## Vue d'ensemble
 

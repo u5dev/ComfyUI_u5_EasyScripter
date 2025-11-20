@@ -1,6 +1,6 @@
 # 内置函数完整索引
 
-[← 返回主文档](README.md) | [English](../02_builtin_functions/00_index.md) | [日本語](../02_builtin_functions/00_index.md) | [Français](../fr/00_index.md) | [Español](../es/00_index.md)
+[← 返回主文档](README.md)
 
 **本页面是u5 EasyScripter内置函数的参考索引。**
 

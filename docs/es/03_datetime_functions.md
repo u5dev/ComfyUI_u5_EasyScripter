@@ -146,18 +146,6 @@ hours = DATEDIFF("h", "2024-01-15 10:00:00", NOW())
 PRINT(hours) ' Tiempo transcurrido
 ```
 
-### WEEKDAY([date], [firstday])
-**Descripción**: Devuelve el día de la semana
-**Argumentos**:
-- date - Cadena de fecha (omitido: hoy)
-- firstday - Primer día de la semana (omitido: 1=domingo)
-**Valor de retorno**: Día de la semana (1=domingo, 2=lunes, ..., 7=sábado)
-**Ejemplo**:
-```vba
-day = WEEKDAY("2024-01-15")
-PRINT(day)  ' Número del día de la semana
-```
-
 ### CDATE(date_string)
 **Descripción**: Convierte cadena de fecha a tipo de fecha (compatible con VBA)
 **Argumentos**: date_string - Cadena que representa una fecha

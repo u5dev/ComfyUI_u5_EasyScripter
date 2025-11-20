@@ -1,6 +1,6 @@
 # Historique des mises à jour (CHANGELOG)
 
-[日本語](../../docs/CHANGELOG.md) | [English](../en/CHANGELOG.md) | [中文](../zh/CHANGELOG.md) | [Español](../es/CHANGELOG.md) | **Français** | [Deutsch](../de/CHANGELOG.md)
+[日本語](../CHANGELOG.md) | [English](../en/CHANGELOG.md) | [中文](../zh/CHANGELOG.md) | [Español](../es/CHANGELOG.md) | **Français** | [Deutsch](../de/CHANGELOG.md)
 
 ---
 
@@ -105,4 +105,4 @@ Historique des principales mises à jour de version de u5 EasyScripter.
 
 ---
 
-**Pour l'historique complet**, veuillez consulter [CHANGELOG.md](../../docs/CHANGELOG.md) en japonais.
+**Pour l'historique complet**, veuillez consulter [CHANGELOG.md](../CHANGELOG.md) en japonais.

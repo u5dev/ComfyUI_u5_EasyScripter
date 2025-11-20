@@ -1,12 +1,6 @@
 # Référence des fonctions d'expressions régulières
 
-[日本語](../../docs/02_builtin_functions/05_regex_functions.md) | [English](../en/05_regex_functions.md) | [中文](../zh/05_regex_functions.md) | [Español](../es/05_regex_functions.md) | **Français** | [Deutsch](../de/05_regex_functions.md)
-
----
-
 [← Retour à l'index des fonctions intégrées](00_index.md)
-
----
 
 ## Vue d'ensemble
 

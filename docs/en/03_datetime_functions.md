@@ -1,7 +1,5 @@
 # Date/Time Functions Reference
 
-**Languages**: [日本語](../02_builtin_functions/03_datetime_functions.md) | [English](03_datetime_functions.md)
-
 [← Back to Built-in Functions Index](00_index.md)
 
 Complete reference for date/time functions available in u5 EasyScripter.

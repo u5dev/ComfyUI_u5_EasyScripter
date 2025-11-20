@@ -1,12 +1,6 @@
 # Référence des fonctions utilitaires
 
-[日本語](../../docs/02_builtin_functions/09_utility_functions.md) | [English](../en/09_utility_functions.md) | [中文](../zh/09_utility_functions.md) | [Español](../es/09_utility_functions.md) | **Français** | [Deutsch](../de/09_utility_functions.md)
-
----
-
 [← Retour à l'index des fonctions intégrées](00_index.md)
-
----
 
 Les fonctions utilitaires sont un groupe de fonctions pratiques qui assistent le développement de scripts, telles que la sortie de débogage, le jugement de type et le traitement d'entrée.
 

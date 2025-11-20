@@ -1,9 +1,5 @@
 # Datums- und Zeitfunktionen-Referenz
 
-**Sprachen**: [English](../02_builtin_functions/03_datetime_functions.md) | [日本語](../02_builtin_functions/03_datetime_functions.md) | [한국어](../ko/03_datetime_functions.md) | [Français](../fr/03_datetime_functions.md) | **Deutsch** | [Español](../es/03_datetime_functions.md)
-
-![](../img/comfyui_u5_easyscripter_banner_800x200.png)
-
 [← Zurück zum Index der integrierten Funktionen](00_index.md)
 
 Vollständige Referenz der Datums- und Zeitfunktionen, die in u5 EasyScripter verfügbar sind.

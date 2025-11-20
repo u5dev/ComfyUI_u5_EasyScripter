@@ -1,7 +1,5 @@
 # Utility Functions Reference
 
-**Languages**: [日本語](../02_builtin_functions/09_utility_functions.md) | [English](09_utility_functions.md)
-
 [← Back to Built-in Functions Index](00_index.md)
 
 Utility functions are a set of convenient functions that support script development, including debug output, type detection, and input processing.
@@ -625,6 +623,66 @@ END SELECT
 
 ---
 
+### GETANYVALUEINT([any_data])
+
+**Description**: Get integer value from ANY type data
+
+**Arguments**:
+- any_data (Any, optional) - Data
+  - If no argument, automatically uses data from any_input input socket
+
+**Return Value**: int - Integer value (returns 0 if cannot retrieve)
+
+**Example**:
+```vba
+' Get integer value from any_input input socket
+int_value = GETANYVALUEINT()
+PRINT("Integer value: " & int_value)
+RETURN1 = int_value
+```
+
+---
+
+### GETANYVALUEFLOAT([any_data])
+
+**Description**: Get floating point value from ANY type data
+
+**Arguments**:
+- any_data (Any, optional) - Data
+  - If no argument, automatically uses data from any_input input socket
+
+**Return Value**: float - Floating point value (returns 0.0 if cannot retrieve)
+
+**Example**:
+```vba
+' Get floating point value from any_input input socket
+float_value = GETANYVALUEFLOAT()
+PRINT("Float value: " & float_value)
+RETURN1 = float_value
+```
+
+---
+
+### GETANYSTRING([any_data])
+
+**Description**: Get string from ANY type data
+
+**Arguments**:
+- any_data (Any, optional) - Data
+  - If no argument, automatically uses data from any_input input socket
+
+**Return Value**: str - String (returns empty string if cannot retrieve)
+
+**Example**:
+```vba
+' Get string from any_input input socket
+str_value = GETANYSTRING()
+PRINT("String: " & str_value)
+RETURN1 = str_value
+```
+
+---
+
 ## Type Detection Functions
 
 ### ISNUMERIC(value)
@@ -655,6 +713,82 @@ ELSE
     PRINT("Error: Not a number")
 END IF
 ```
+
+---
+
+### ISDATE(value)
+
+**Description**: Determines if value can be parsed as a date
+
+**Arguments**:
+- value - Value to check
+
+**Return Value**: 1 (date) or 0 (non-date)
+
+**Example**:
+```vba
+result = ISDATE("2024-01-15")     ' 1
+PRINT("ISDATE('2024-01-15') = " & result)
+result = ISDATE("2024/01/15")     ' 1
+PRINT("ISDATE('2024/01/15') = " & result)
+result = ISDATE("15:30:00")       ' 1 (time can also be detected)
+PRINT("ISDATE('15:30:00') = " & result)
+result = ISDATE("hello")          ' 0
+PRINT("ISDATE('hello') = " & result)
+
+' Practical example: Date validation
+IF ISDATE(TXT1) THEN
+    dateVal = DATEVALUE(TXT1)
+    PRINT("Processing as date: " & dateVal)
+ELSE
+    PRINT("Error: Not in date format")
+END IF
+```
+
+**Supported Formats**:
+- `YYYY/MM/DD HH:MM:SS`
+- `YYYY/MM/DD`
+- `YYYY-MM-DD HH:MM:SS`
+- `YYYY-MM-DD`
+- `MM/DD/YYYY`
+- `DD/MM/YYYY`
+- `HH:MM:SS`
+- `HH:MM`
+
+---
+
+### ISARRAY(variable_name)
+
+**Description**: Determines if variable is an array
+
+**Arguments**:
+- variable_name - Variable name (string) or array variable reference (ARR[] notation)
+
+**Return Value**: 1 (array) or 0 (non-array)
+
+**Example**:
+```vba
+REDIM arr, 10
+result = ISARRAY(arr[])      ' 1 (array reference)
+PRINT("ISARRAY(arr[]) = " & result)
+result = ISARRAY("arr")      ' 1 (array name string)
+PRINT("ISARRAY('arr') = " & result)
+result = ISARRAY("VAL1")     ' 0 (regular variable)
+PRINT("ISARRAY('VAL1') = " & result)
+
+' Practical example: Variable type checking
+REDIM myData, 5
+myData[0] = "a"
+myData[1] = "b"
+IF ISARRAY(myData[]) THEN
+    PRINT("It's an array. Element count: " & (UBOUND(myData[]) + 1))
+ELSE
+    PRINT("Not an array")
+END IF
+```
+
+**Note**:
+- Pass array name as string or array variable reference with ARR[] notation
 
 ---
 

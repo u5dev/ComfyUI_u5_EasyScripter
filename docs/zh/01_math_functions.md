@@ -1,6 +1,6 @@
 # 数学函数参考
 
-[← 返回内置函数索引](00_index.md) | [English](../02_builtin_functions/01_math_functions.md) | [日本語](../02_builtin_functions/01_math_functions.md) | [Français](../fr/01_math_functions.md) | [Español](../es/01_math_functions.md)
+[← 返回内置函数索引](00_index.md)
 
 u5 EasyScripter可用的数学函数完整参考。
 

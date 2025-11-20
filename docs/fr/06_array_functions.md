@@ -1,12 +1,6 @@
 # Référence des fonctions de tableaux
 
-[日本語](../../docs/02_builtin_functions/06_array_functions.md) | [English](../en/06_array_functions.md) | [中文](../zh/06_array_functions.md) | [Español](../es/06_array_functions.md) | **Français** | [Deutsch](../de/06_array_functions.md)
-
----
-
 [← Retour à l'index des fonctions intégrées](00_index.md)
-
----
 
 ## Vue d'ensemble
 

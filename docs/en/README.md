@@ -56,9 +56,9 @@ RETURN2 = RESULT[1] '896
 See the following for detailed documentation:
 
 
-- **[📖 Scripting Language Reference](../01_syntax_reference.md)** - Complete guide to grammar and control structures
+- **[📖 Scripting Language Reference](01_syntax_reference.md)** - Complete guide to grammar and control structures
 - **[🔧 Built-in Functions Reference](00_index.md)** - Complete reference for 100+ built-in functions
-- **[🌟 Please Support Us](../CONTENTS.md)** - More practical and useful examples, abundant workflow images, detailed explanations
+- **[🌟 Please Support Us](CONTENTS.md)** - More practical and useful examples, abundant workflow images, detailed explanations
 
 
 ---

@@ -213,4 +213,55 @@ PRINT(result)      ' Z,M,B,A
 
 ---
 
+## Ejemplos prácticos
+
+### Selección aleatoria en generación de prompts
+
+```vba
+' Selección aleatoria de estilo (1 opción)
+style = RNDCSV("photorealistic,anime,oil painting,watercolor")
+PRINT(style)
+' Selección aleatoria de tono
+tone = RNDCSV("warm,cool,vivid,muted,monochrome")
+PRINT(tone)
+' Selección aleatoria de hora del día
+time = RNDCSV("morning,noon,sunset,night")
+PRINT(time)
+
+PRINT("1girl, " & style & ", " & tone & " tone, " & time)
+
+' Mezcla de múltiples estilos (selección de array)
+DIM styles[3]
+styles = RNDCSV("realistic,anime,3d,sketch,oil,watercolor,digital", 3)
+PRINT(styles)
+stylePrompt = CSVJOIN(styles, ", ")
+PRINT(stylePrompt)
+PRINT("1girl, " & stylePrompt)
+```
+
+
+### Eliminación de duplicados y fusión de listas
+
+```vba
+' Fusionar múltiples listas de etiquetas
+tags1 = "girl,outdoor,sunny,smile"
+PRINT(tags1)
+tags2 = "outdoor,happy,smile,park"
+PRINT(tags2)
+tags3 = "girl,smile,nature"
+PRINT(tags3)
+
+' Fusión
+allTags = CSVMERGE(tags1, tags2, tags3)
+PRINT(allTags)
+' "girl,outdoor,sunny,smile,happy,smile,park,girl,smile,nature"
+
+' Eliminar duplicados
+uniqueTags = CSVUNIQUE(allTags)
+PRINT(uniqueTags)
+' "girl,outdoor,sunny,smile,happy,park,nature"
+```
+
+---
+
 [← Volver al índice de funciones integradas](00_index.md)

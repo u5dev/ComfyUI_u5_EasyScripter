@@ -105,6 +105,44 @@ PRINT("SDXL Óptimo: " & final_width & "x" & final_height)
 ' Salida: "SDXL Óptimo: 1344x768"
 ```
 
+### Script genérico compatible con múltiples modelos
+
+```vba
+' Obtener resolución óptima para cada modelo solo cambiando el nombre del modelo
+DIM model_name
+DIM aspect_width
+DIM aspect_height
+
+model_name = "Flux"
+PRINT(model_name)  ' Confirmar resultado intermedio
+' Salida: "Flux"
+aspect_width = 1024
+PRINT(aspect_width)  ' Confirmar resultado intermedio
+' Salida: "1024"
+aspect_height = 1024
+PRINT(aspect_height)  ' Confirmar resultado intermedio
+' Salida: "1024"
+
+DIM result
+result = OPTIMAL_LATENT(model_name, aspect_width, aspect_height)
+PRINT(result)  ' Confirmar resultado intermedio
+' Salida: "Model: FLUX.1 (dev/pro) | Optimal: 1024x1024 (1:1)"
+' Salida: "{0: 1024, 1: 1024}"
+PRINT(model_name & " -> " & result(0) & "x" & result(1))
+' Salida: "Flux -> 1024x1024"
+
+' Cambiar a SD1.5
+model_name = "SD 1.5"
+PRINT(model_name)  ' Confirmar resultado intermedio
+' Salida: "SD 1.5"
+result = OPTIMAL_LATENT(model_name, aspect_width, aspect_height)
+PRINT(result)  ' Confirmar resultado intermedio
+' Salida: "Model: blue_pencil（SD1.5） | Optimal: 512x512 (1:1)"
+' Salida: "{0: 512, 1: 512}"
+PRINT(model_name & " -> " & result(0) & "x" & result(1))
+' Salida: "SD 1.5 -> 512x512"
+```
+
 ---
 
 [← Volver al índice de funciones integradas](00_index.md)

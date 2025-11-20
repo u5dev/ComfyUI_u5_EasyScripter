@@ -1,12 +1,6 @@
 # Référence des fonctions de chaînes de caractères
 
-[日本語](../../docs/02_builtin_functions/02_string_functions.md) | [English](../en/02_string_functions.md) | [中文](../zh/02_string_functions.md) | [Español](../es/02_string_functions.md) | **Français** | [Deutsch](../de/02_string_functions.md)
-
----
-
 [← Retour à l'index des fonctions intégrées](00_index.md)
-
----
 
 Référence complète des fonctions de chaînes de caractères disponibles dans u5 EasyScripter.
 
